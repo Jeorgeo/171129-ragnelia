@@ -1,0 +1,9 @@
+@font-face {
+	font-family: TPR; /* Гарнитура шрифта */
+	src: url(font/TPR.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+	font-family: TPB; /* Гарнитура шрифта */
+	src: url(font/TPB.otf); /* Путь к файлу со шрифтом */
+}

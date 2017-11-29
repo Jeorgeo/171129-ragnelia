@@ -1,0 +1,109 @@
+#opinionPage
+{
+	position: relative;
+	margin-top: 200px;
+}
+
+#opinionPage .content 
+{
+	position: relative;
+	margin: auto;
+	max-width: 1000px;
+	color: #fff;
+}
+
+#opinionPage .content .title
+{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	font-size: 24px;
+	font-family: TPR;
+}
+
+#opinionPage .content .opinionBox
+{
+	position: relative;
+	margin-top: 100px;
+}
+
+#opinionPage .content .opinionBox .unit
+{
+	position: relative;
+	display: flex;
+	width: 100%;
+	border-bottom: 2px #e08b44 solid;
+	padding: 0px 30px 30px 30px;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+}
+
+#opinionPage .content .opinionBox .unit:last-child
+{
+	border-bottom: 0px #e08b44 solid;
+}
+
+#opinionPage .content .opinionBox .unit .img
+{
+	position: relative;
+	width: 250px;
+}
+
+#opinionPage .content .opinionBox .unit .img img
+{
+	width: 100%;
+}
+
+#opinionPage .content .opinionBox .unit .text
+{
+	position: relative;
+	margin: 20px 0 0 30px;
+	width: 75%;
+	font-size: 14px;
+}
+
+#opinionPage .content .opinionBox .unit .text .let
+{
+	position: relative;
+	font-family: TPR;
+	color: #e08b44;
+	margin-top: 10px;
+}
+
+#opinionPage .content .opinionBox .unit .text .let:first-child
+{
+	margin: 0;
+}
+
+#opinionPage .content .opinionBox .unit .text .let .val
+{
+	position: relative;
+	font-family: calibri;
+	font-weight: 100;
+	color: #fff;
+}
+
+#opinionPage .content .opinionBox .unit .text .let .val.o
+{
+	display: block;
+}
+
+#opinionPage .content .opinionBox .unit .want
+{
+	position: absolute;
+	width: 100px;
+	height: 25px;
+	font-size: 14px;
+	right: 30px;
+	bottom: 30px;
+	text-align: center;
+    padding-top: 2px;
+    box-sizing: border-box;
+}
+
+#opinionPage .content .opinionBox .unit .want .text
+{
+	text-align: center;
+	margin: 0;
+	width: auto;
+}

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Рагнелия</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="/css/fonts.css">
@@ -20,8 +21,11 @@
 ?>
 <body>
 <div id="menu">
-	<a href="/"><div class="logo"><object data="/css/img/logo.svg" height="62px" type="image/svg+xml"></object></div></a>
-	<div class="units">
+	<div id="js-toggle" class="left-panel__menu-toggle">
+		<button class="header-menu-toggle"><span>menu</span></button>
+	</div>
+	<a class="logo-link" href="/"><div class="logo"><object data="/css/img/logo.svg" height="62px" type="image/svg+xml"></object></div></a>
+	<div class="units left-panel">
 		<a href="/" class="unit <?echo $mainMenu;?>"><span>Главная</span><div class="line"></div></a>
 		<a href="/price" class="unit <?echo $priceMenu;?>"><span>Услуги и цены</span><div class="line"></div></a>
 		<a href="/portfolio" class="unit <?echo $portfolioMenu;?>"><span>Портфолио</span><div class="line"></div></a>
@@ -72,6 +76,7 @@
 	</div>
 </div>
 </body>
+<script type="text/javascript" src="/js/menu.js"></script>
 <script type="text/javascript" src="/js/jquery.min.js"></script>
 <script type="text/javascript" src="/js/jqueryImage.min.js"></script>
 <script type="text/javascript" src="/js/allScript.js"></script>

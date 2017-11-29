@@ -1,9 +1,62 @@
+/*--------------------------------------------------------------
+# Animation
+--------------------------------------------------------------*/
+
+@keyframes show-panel {
+  from { top: -310px; }
+  to   { top: 0; }
+}
+
+@keyframes hidden-panel {
+  from { top: 0; }
+  to   { top: -310px; }
+}
+
+@keyframes show-span {
+  from { background-color: transparent; }
+  to   { background-color: #ffd09c; }
+}
+
+@keyframes hide-span {
+  from { background-color: #ffd09c; }
+  to   { background-color: transparent; }
+}
+
+@keyframes rotate-up {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-45deg); }
+}
+
+@keyframes prerotate-up {
+  from { transform: rotate(-45deg);
+  top: 0px; }
+  to   { transform: rotate(0deg);
+  top: -6px;}
+}
+
+@keyframes rotate-bottom {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(45deg); }
+}
+
+@keyframes prerotate-bottom {
+  from { transform: rotate(45deg);
+  bottom: 0px}
+  to   { transform: rotate(0deg);
+  bottom: -6px;}
+}
+
 body
 {
 	margin: 0;
 	padding: 0;
 	background: #000;
 	/*mainCOLOR   #e08b44   */
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 #menu
@@ -1074,10 +1127,11 @@ body
 #opinion .content .opinionGo
 {
 	position: relative;
+	width: 270px;
 	margin: auto;
 	margin-top: 50px;
-    padding: 5px 15px 5px 15px;
-    font-size: 14px;
+  padding: 5px 15px 5px 15px;
+  font-size: 14px;
 }
 
 #callBackBlock
@@ -1361,6 +1415,278 @@ body
     border: 2px rgba(0,0,0,0) solid;
     outline: 2px #fff solid;
 	max-height: 100%;
+}
+
+@media screen and (max-width: 720px) {
+	#menu {
+		position: fixed;
+    top: 0;
+    left: 0;
+		z-index: 9999;
+		padding: 0;
+	}
+
+	.logo-link {
+		position: relative;
+		z-index: 9999;
+		display: block;
+		text-align: center;
+		background: #000000;
+	}
+
+	#menu .units {
+		position: absolute;
+		left: 0;
+		float: none;
+		display: block;
+		width: 100%;
+		margin: auto;
+		padding: 1em;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+
+	#menu .units .unit {
+		display: inline-block;
+		width: 100%;
+		margin: 1em 0;
+		margin-left: 0.5em;
+		padding: 0;
+		padding-right: 40%;
+		box-sizing: border-box;
+	}
+
+	#menu .units .callback .phone,
+	#menu .units .callback .email {
+		margin: 0.5em 0;
+	}
+
+	#mainBanner .content {
+	padding: 0 1em;
+}
+
+	#mainBanner .content .title {
+    margin-top: 125px;
+		font-size: 2em;
+	}
+
+	#mainBanner .content .panelButton {
+		position: relative;
+		bottom: 0;
+	}
+
+	#about .content .rightBlock {
+		width: 100%;
+	}
+
+	#about .content,
+	#clients .contentBlock .content {
+		flex-direction: column;
+		padding: 0 1.5em;
+	}
+
+	#about .content .rightBlock .unit {
+		margin: 0.7em auto;
+	}
+
+	#calc .content .calcBlock .inputs {
+		width: 100%;
+	}
+
+	#calc .content .calcBlock .inputs input {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#calc .content .calcBlock .button.submit {
+		width: 230px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 1.5em;
+	}
+
+	#clients .contentBlock .content .leftBlock,
+	#clients .contentBlock .content .rightBlock {
+		width: 100%;
+	}
+
+	#project .content .sliderBox .contentBox {
+		height: 450px;
+	}
+
+	#project .content .sliderBox .contentBox .unit {
+		height: auto;
+		display: block;
+	}
+
+	#project .content .sliderBox .contentBox .unit .img {
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+
+	#project .content .sliderBox .button.port {
+		position: relative;
+		display: block;
+		margin-top: 1em;
+	}
+
+	#callBackBlock .content .formBlock {
+		width: 100%;
+	}
+
+	#callBackBlock .content .formBlock textarea,
+	#callBackBlock .content .formBlock input,
+	#callBackBlock .content .formBlock .button.submit {
+		display: block;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 1em;
+		box-sizing: border-box;
+	}
+
+	#footer .content {
+		width: 100%;
+		padding: 1em 1em;
+		box-sizing: border-box;
+	}
+
+	#footer .content .units .unit {
+		display: none;
+	}
+
+	#footer .content .units .callback {
+		margin: 0;
+	}
+
+	#opinion .content .opinionGo,
+	#project .content .sliderBox .button.port,
+	#calc .content .calcBlock .button.submit {
+		font-size: 1.5em;
+	}
+
+  /*--------------------------------------------------------------
+  # Header
+    ## Header mobile menu
+  --------------------------------------------------------------*/
+
+  .box-menu-toggle {
+    position: relative;
+  }
+
+  .left-panel {
+    position: fixed;
+    left: 0;
+    z-index: 998;
+    width: 100%;
+    padding: 1em;
+    padding-top: 55px;
+    color: #ffd09c;
+    background-color: #3a75c4;
+    animation-name:hidden-panel;
+    animation-duration: 0.8s;
+    top: -310px;
+    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.35);
+  }
+
+  .left-panel.left-panel-show {
+    animation-name:show-panel;
+    animation-duration: 0.8s;
+    top: 0;
+  }
+
+  .left-panel__menu-toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 3px;
+    font-size: 0;
+  }
+
+  .header-menu-toggle {
+    position: absolute;
+    top: 24px;
+    left: 32px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+
+  .header-menu-toggle span {
+    position: absolute;
+    display: block;
+    width: 30px;
+    top: 14px;
+    left: 2px;
+    height: 2px;
+    font-size: 0;
+    animation-name: show-span;
+    animation-duration: 0.8s;
+    background-color: #ffd09c;
+  }
+
+  .header-menu-toggle span::before,
+  .header-menu-toggle span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ffd09c;
+    content: "";
+  }
+
+  .header-menu-toggle span::before {
+    transform: rotate(-45deg);
+    animation-name: prerotate-up;
+    animation-duration: 0.8s;
+    transform: rotate(0deg);
+    top: -6px;
+  }
+
+  .header-menu-toggle span::after {
+    transform: rotate(45deg);
+    animation-name: prerotate-bottom;
+    animation-duration: 0.8s;
+    transform: rotate(0deg);
+    bottom: -6px;
+  }
+
+  .nav-show {
+    display: block;
+    animation-name: show-panel;
+    animation-duration: 0.5s;
+    left: 0;
+  }
+
+  .header-menu-toggle.btn-arrow-top span::before  {
+    animation-name: rotate-up;
+    animation-duration: 0.8s;
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .header-menu-toggle.btn-arrow-bottom span::after {
+    animation-name: rotate-bottom;
+    animation-duration: 0.8s;
+    transform: rotate(45deg);
+    bottom: 0;
+  }
+
+  .header-menu-toggle.btn-arrow-bottom span {
+    animation-name: hide-span;
+    animation-duration: 0.8s;
+    background-color: transparent;
+  }
+
 }
 
 /*mainCOLOR   #e08b44   */

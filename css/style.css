@@ -3,13 +3,13 @@
 --------------------------------------------------------------*/
 
 @keyframes show-panel {
-  from { top: -310px; }
-  to   { top: 0; }
+  from { top: -275px; }
+  to   { top: 65px; }
 }
 
 @keyframes hidden-panel {
-  from { top: 0; }
-  to   { top: -310px; }
+  from { top: 65px; }
+  to   { top: -275px; }
 }
 
 @keyframes show-span {
@@ -59,6 +59,12 @@ img {
 	height: auto;
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
 #menu
 {
 	position: fixed;
@@ -67,9 +73,14 @@ img {
 	background: #000;
 	top: 0;
 	left: 0;
-	padding: 0 100px 0 100px;
+	padding: 0 1.5em;
 	box-sizing: border-box;
 	z-index: 10;
+}
+
+.left-panel__menu-toggle,
+.phone-link {
+  display: none;
 }
 
 #menu .logo
@@ -164,6 +175,15 @@ img {
 #menu .units .callback .phone
 {
 	font-size: 17px;
+}
+
+.callback .phone a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.callback .phone a:hover {
+  color: #e08b44;
 }
 
 #mainBanner
@@ -1255,9 +1275,11 @@ img {
 #footer .content
 {
 	position: relative;
-	max-width: 1000px;
+  width: 100%;
+	max-width: 1200px;
 	margin: auto;
-	padding: 50px 0 50px 0;
+	padding: 1.5em;
+  box-sizing: border-box;
 }
 
 #footer .content .logo
@@ -1417,8 +1439,8 @@ img {
 	max-height: 100%;
 }
 
-@media screen and (max-width: 720px) {
-	#menu {
+@media screen and (max-width: 1023px) {
+  #menu {
 		position: fixed;
     top: 0;
     left: 0;
@@ -1426,13 +1448,14 @@ img {
 		padding: 0;
 	}
 
-	.logo-link {
-		position: relative;
-		z-index: 9999;
-		display: block;
-		text-align: center;
-		background: #000000;
-	}
+  .logo-link {
+    position: relative;
+    z-index: 9999;
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    text-align: center;
+  }
 
 	#menu .units {
 		position: absolute;
@@ -1441,7 +1464,7 @@ img {
 		display: block;
 		width: 100%;
 		margin: auto;
-		padding: 1em;
+		padding: 0 1em;
 		background-color: rgba(0, 0, 0, 0.7);
 	}
 
@@ -1460,110 +1483,14 @@ img {
 		margin: 0.5em 0;
 	}
 
-	#mainBanner .content {
-	padding: 0 1em;
-}
+  .arrowBlock,
+  #footer .content .units .unit {
+    display: none;
+  }
 
-	#mainBanner .content .title {
-    margin-top: 125px;
-		font-size: 2em;
-	}
-
-	#mainBanner .content .panelButton {
-		position: relative;
-		bottom: 0;
-	}
-
-	#about .content .rightBlock {
-		width: 100%;
-	}
-
-	#about .content,
-	#clients .contentBlock .content {
-		flex-direction: column;
-		padding: 0 1.5em;
-	}
-
-	#about .content .rightBlock .unit {
-		margin: 0.7em auto;
-	}
-
-	#calc .content .calcBlock .inputs {
-		width: 100%;
-	}
-
-	#calc .content .calcBlock .inputs input {
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	#calc .content .calcBlock .button.submit {
-		width: 230px;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 1.5em;
-	}
-
-	#clients .contentBlock .content .leftBlock,
-	#clients .contentBlock .content .rightBlock {
-		width: 100%;
-	}
-
-	#project .content .sliderBox .contentBox {
-		height: 450px;
-	}
-
-	#project .content .sliderBox .contentBox .unit {
-		height: auto;
-		display: block;
-	}
-
-	#project .content .sliderBox .contentBox .unit .img {
-		width: 100%;
-		height: 100%;
-		text-align: center;
-	}
-
-	#project .content .sliderBox .button.port {
-		position: relative;
-		display: block;
-		margin-top: 1em;
-	}
-
-	#callBackBlock .content .formBlock {
-		width: 100%;
-	}
-
-	#callBackBlock .content .formBlock textarea,
-	#callBackBlock .content .formBlock input,
-	#callBackBlock .content .formBlock .button.submit {
-		display: block;
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 1em;
-		box-sizing: border-box;
-	}
-
-	#footer .content {
-		width: 100%;
-		padding: 1em 1em;
-		box-sizing: border-box;
-	}
-
-	#footer .content .units .unit {
-		display: none;
-	}
-
-	#footer .content .units .callback {
-		margin: 0;
-	}
-
-	#opinion .content .opinionGo,
-	#project .content .sliderBox .button.port,
-	#calc .content .calcBlock .button.submit {
-		font-size: 1.5em;
-	}
+  #clients .line4 {
+    height: 65px;
+  }
 
   /*--------------------------------------------------------------
   # Header
@@ -1581,25 +1508,25 @@ img {
     width: 100%;
     padding: 1em;
     padding-top: 55px;
-    color: #ffd09c;
-    background-color: #3a75c4;
+    background-color: rgba(0, 0, 0, 0.5);
     animation-name:hidden-panel;
     animation-duration: 0.8s;
-    top: -310px;
+    top: -275px;
     box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0.35);
   }
 
   .left-panel.left-panel-show {
     animation-name:show-panel;
     animation-duration: 0.8s;
-    top: 0;
+    top: 65px;
   }
 
   .left-panel__menu-toggle {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 24px;
+    left: 32px;
     z-index: 99999;
+    display: block;
     width: 30px;
     height: 30px;
     margin: 0;
@@ -1609,8 +1536,8 @@ img {
 
   .header-menu-toggle {
     position: absolute;
-    top: 24px;
-    left: 32px;
+    top: 0;
+    left: 0;
     display: block;
     width: 30px;
     height: 30px;
@@ -1630,7 +1557,7 @@ img {
     font-size: 0;
     animation-name: show-span;
     animation-duration: 0.8s;
-    background-color: #ffd09c;
+    background-color: #e08b44;
   }
 
   .header-menu-toggle span::before,
@@ -1640,7 +1567,7 @@ img {
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: #ffd09c;
+    background-color: #e08b44;
     content: "";
   }
 
@@ -1688,5 +1615,252 @@ img {
   }
 
 }
+
+@media screen and (max-width: 720px) {
+  #about {
+    margin-top: 0;
+  }
+
+  #clients {
+    padding-bottom: 20px;
+  }
+
+  .logo-link {
+    display: block;
+    width: 100%;
+    margin: auto;
+    background: #000000;
+  }
+
+  .phone-link {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    z-index: 99999;
+    display: block;
+    width: 36px;
+    height: 36px;
+    font-size: 0;
+    background: url('../images/icon_photo.png') no-repeat 50% 50%;
+    background-size: contain;
+  }
+
+	  #mainBanner .content {
+  	padding: 0 1em;
+  }
+
+	#mainBanner .content .title {
+    margin-top: 125px;
+    text-transform: uppercase;
+    line-height: 1.5em;
+		font-size: 1.6em;
+    font-weight: bold;
+	}
+
+	#mainBanner .content .panelButton {
+		position: relative;
+		bottom: 10%;
+	}
+
+	#about .content .rightBlock {
+		width: 100%;
+	}
+
+	#about .content,
+	#clients .contentBlock .content {
+		flex-direction: column;
+		padding: 0 1.5em;
+	}
+
+	#about .content .rightBlock .unit {
+		margin: 0.7em auto;
+	}
+
+	#calc .content .calcBlock .inputs {
+		width: 100%;
+	}
+
+	#calc .content .calcBlock .inputs input {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+  #calc .content .calcBlock input.phone {
+    display: block;
+    margin: auto;
+  }
+
+	#calc .content .calcBlock .button.submit {
+		width: 230px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 1.5em;
+	}
+
+	#clients .contentBlock .content .leftBlock,
+	#clients .contentBlock .content .rightBlock {
+		width: 100%;
+	}
+
+  #clients .contentBlock .content .leftBlock {
+    margin-top: 1em;
+  }
+
+  #clients .contentBlock .content .rightBlock {
+    margin-bottom: 2em;
+  }
+
+	#project .content .sliderBox .contentBox {
+		height: 450px;
+	}
+
+	#project .content .sliderBox .contentBox .unit {
+		height: auto;
+		display: block;
+	}
+
+	#project .content .sliderBox .contentBox .unit .img {
+		width: 100%;
+		height: 100%;
+		text-align: center;
+	}
+
+	#project .content .sliderBox .button.port {
+		position: relative;
+		display: block;
+		margin-top: 1em;
+	}
+
+	#callBackBlock .content .formBlock {
+		width: 100%;
+	}
+
+	#callBackBlock .content .formBlock textarea,
+	#callBackBlock .content .formBlock input,
+	#callBackBlock .content .formBlock .button.submit {
+		display: block;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 1em;
+		box-sizing: border-box;
+	}
+
+  /*-------------------------------------------------------------------------
+    # Price
+  ---------------------------------------------------------------------------*/
+
+  .pricesBox a {
+    display: block;
+    margin: auto;
+  }
+
+  /*-------------------------------------------------------------------------
+    # Opinion
+  ---------------------------------------------------------------------------*/
+
+  #opinionPage {
+    margin-bottom: 3em;
+  }
+
+  #opinionPage .content .opinionBox {
+      margin-top: 1.5em;
+  }
+
+  #opinionPage .content .opinionBox .unit {
+    flex-direction: column;
+  }
+
+  #opinionPage .content .opinionBox .unit .img {
+    margin: auto;
+  }
+
+  #opinionPage .content .opinionBox .unit .button.want {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 240px;
+    height: auto;
+    margin: 0.5em auto;
+    padding: 0.3em;
+    box-sizing: border-box;
+  }
+
+  #opinionPage .content .opinionBox .unit .button.want .text {
+    font-size: 1.5em;
+  }
+
+  /*-------------------------------------------------------------------------
+    # aboutPage
+  ---------------------------------------------------------------------------*/
+
+  #aboutPage .content div.flex {
+    flex-direction: column;
+    margin-top: 1em;
+  }
+
+  #aboutPage .content div.leftBlock,
+  #aboutPage .content div.rightBlock {
+    width: 100%;
+  }
+
+  #aboutPage .content div.rightBlock {
+    margin: 0;
+    padding: 1em;
+    box-sizing: border-box;
+  }
+
+  #aboutPage .content .authorText {
+    padding-left: 1em;
+    padding-right: 1em;
+    box-sizing: border-box;
+  }
+
+/*-------------------------------------------------------------------------
+  #contact
+---------------------------------------------------------------------------*/
+
+  div#contact {
+    margin: 0;
+  }
+
+  #contact .content .mapsBox {
+    flex-direction: column;
+  }
+
+  #contact .content .mapsBox div.maps {
+    width: 100%;
+  }
+
+  div#callBackBlock {
+    margin-top: 1em;
+  }
+
+	#footer .content {
+		width: 100%;
+		padding: 1em 1em;
+		box-sizing: border-box;
+	}
+
+	#footer .content .units .callback {
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 480px) {
+  #opinion .content .opinionGo,
+	#project .content .sliderBox .button.port,
+	#calc .content .calcBlock .button.submit {
+    height: auto;
+    padding: 0.3em;
+    font-size: 1.5em;
+	}
+
+  #mainBanner .content .panelButton {
+    bottom: 0;
+  }
+}
+
+
 
 /*mainCOLOR   #e08b44   */

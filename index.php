@@ -21,20 +21,23 @@
 ?>
 <body>
 <div id="menu">
-	<div id="js-toggle" class="left-panel__menu-toggle">
-		<button class="header-menu-toggle"><span>menu</span></button>
-	</div>
-	<a class="logo-link" href="/"><div class="logo"><object data="/css/img/logo.svg" height="62px" type="image/svg+xml"></object></div></a>
-	<div class="units left-panel">
-		<a href="/" class="unit <?echo $mainMenu;?>"><span>Главная</span><div class="line"></div></a>
-		<a href="/price" class="unit <?echo $priceMenu;?>"><span>Услуги и цены</span><div class="line"></div></a>
-		<a href="/portfolio" class="unit <?echo $portfolioMenu;?>"><span>Портфолио</span><div class="line"></div></a>
-		<a href="/opinion" class="unit <?echo $opinionMenu;?>"><span>Отзывы</span><div class="line"></div></a>
-		<a href="/about" class="unit <?echo $aboutMenu;?>"><span>О нас</span><div class="line"></div></a>
-		<a href="/contact" class="unit <?echo $contactMenu;?>"><span>Контакты</span><div class="line"></div></a>
-		<div class="callback">
-			<div class="phone">+7 (495) 201-30-21</div>
-			<div class="email">info@рагнелия.рф</div>
+	<div class="container">
+		<div id="js-toggle" class="left-panel__menu-toggle">
+			<button class="header-menu-toggle"><span>menu</span></button>
+		</div>
+		<a class="logo-link" href="/"><div class="logo"><object data="/css/img/logo-v1.png" height="62px" type="image/svg+xml"></object></div></a>
+		<a class="phone-link" href="tel:+74952013021">+7 (495) 201-30-21</a>
+		<div class="units left-panel">
+			<a href="/" class="unit <?echo $mainMenu;?>"><span>Главная</span><div class="line"></div></a>
+			<a href="/price" class="unit <?echo $priceMenu;?>"><span>Услуги и цены</span><div class="line"></div></a>
+			<a href="/portfolio" class="unit <?echo $portfolioMenu;?>"><span>Портфолио</span><div class="line"></div></a>
+			<a href="/opinion" class="unit <?echo $opinionMenu;?>"><span>Отзывы</span><div class="line"></div></a>
+			<a href="/about" class="unit <?echo $aboutMenu;?>"><span>О нас</span><div class="line"></div></a>
+			<a href="/contact" class="unit <?echo $contactMenu;?>"><span>Контакты</span><div class="line"></div></a>
+			<div class="callback">
+				<div class="phone"><a href="tel:+74952013021">+7 (495) 201-30-21</a></div>
+				<div class="email">info@рагнелия.рф</div>
+			</div>
 		</div>
 	</div>
 </div>
@@ -55,7 +58,7 @@
 </div>
 <div id="footer">
 	<div class="content">
-		<a href="/"><div class="logo"><object data="/css/img/logo.svg" height="62px" type="image/svg+xml"></object></div></a>
+		<a href="/"><div class="logo"><object data="/css/img/logo-v1.png" height="62px" type="image/svg+xml"></object></div></a>
 		<div class="units">
 			<a href="/" class="unit <?echo $mainMenu;?>"><span>Главная</span><div class="line"></div></a>
 			<a href="/price" class="unit <?echo $priceMenu;?>"><span>Услуги и цены</span><div class="line"></div></a>
@@ -64,7 +67,7 @@
 			<a href="/about" class="unit <?echo $aboutMenu;?>"><span>О нас</span><div class="line"></div></a>
 			<a href="/contact" class="unit <?echo $contactMenu;?>"><span>Контакты</span><div class="line"></div></a>
 			<div class="callback">
-				<div class="phone">+7 (495) 201-30-21</div>
+				<div class="phone"><a href="tel:+74952013021">+7 (495) 201-30-21</a></div>
 				<div class="email">info@рагнелия.рф</div>
 			</div>
 		</div>

@@ -315,7 +315,7 @@ $news_r = get_posts(
 				</div>
 				<div class="unit">
 				</div>
-			</div>	
+			</div>
 			<div class="button port cloud-link"><span class="text">Хочу также!</span></div>
 		</div>
 	</div>
@@ -324,22 +324,19 @@ $news_r = get_posts(
 	<div class="content">
 		<div class="title">Отзывы и благодарности наших клиентов</div>
 		<div class="opinionBox">
+			<?php
+				foreach ($news_r as $obj) {
+					if($obj->post_name == 'archive'){
+							continue;
+					}
+			 ?>
 			<div class="unit popupOpen">
 				<div class="hoverBox">смотреть</div>
-				<img src="<?php bloginfo('template_url'); ?>/images/opinion/1.jpg">
+				<img src="<?php echo get_field('image',$obj->ID); ?>">
 			</div>
-			<div class="unit popupOpen">
-				<div class="hoverBox">смотреть</div>
-				<img src="<?php bloginfo('template_url'); ?>/images/opinion/2.jpg">
-			</div>
-			<div class="unit popupOpen">
-				<div class="hoverBox">смотреть</div>
-				<img src="<?php bloginfo('template_url'); ?>/images/opinion/3.jpg">
-			</div>
-			<div class="unit popupOpen">
-				<div class="hoverBox">смотреть</div>
-				<img src="<?php bloginfo('template_url'); ?>/images/opinion/4.jpg">
-			</div>
+			<?php
+				}
+			 ?>
 		</div>
 		<div class="button opinionGo"><span class="text">В раздел "Отзывы"</span></div>
 	</div>

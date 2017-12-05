@@ -125,9 +125,15 @@ function ragnelia_scripts() {
 
 	wp_enqueue_script( 'ragnelia-menu', get_template_directory_uri() . '/js/menu.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'ragnelia-all-scripts', get_template_directory_uri() . '/js/allScript.js', array(), '20151215', true );
+	wp_enqueue_script( 'ragnelia-calc', get_template_directory_uri() . '/js/calc.js', array(), '20151215', true );
 
-		wp_enqueue_script( 'ragnelia-calc', get_template_directory_uri() . '/js/calc.js', array(), '20151215', true );
+	wp_enqueue_script( 'ragnelia-libs', get_template_directory_uri() . '/js/libs.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'ragnelia-common', get_template_directory_uri() . '/js/common.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'ragnelia-colorpicker', get_template_directory_uri() . '/js/jqColorPicker.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'ragnelia-all-scripts', get_template_directory_uri() . '/js/allScript.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'ragnelia-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

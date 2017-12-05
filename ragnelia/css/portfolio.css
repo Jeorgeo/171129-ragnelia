@@ -1,0 +1,339 @@
+#portfoliosPage
+{
+	position: relative;
+	margin-top: 200px;
+}
+
+#portfoliosPage .content 
+{
+	position: relative;
+	margin: auto;
+	max-width: 1000px;
+	color: #fff;
+}
+
+#portfoliosPage .content .title
+{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	font-size: 24px;
+	font-family: TPR;
+}
+
+#portfoliosPage .content .portBox
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 80px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#portfoliosPage .content .portBox .unit
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 300px;
+	height: 300px;
+	margin: 10px;
+	overflow: hidden;
+}
+
+#portfoliosPage .content .portBox .unit .name
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	height: 300px;
+	background: rgba(224,139,68,0.8); 
+	color: #fff;
+	z-index: 3;
+	font-size: 20px;
+	font-family: TPR;
+	transition: 0.5s;
+	opacity: 0;
+	cursor: pointer;
+}
+
+#portfoliosPage .content .portBox .unit:hover > .name
+{
+	opacity: 1;
+}
+
+#portfoliosPage .content .portBox .unit img
+{
+	position: relative;
+	height: 100%;
+}
+
+#portfoliosPage .portfolioBox
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	padding-bottom: 20px;
+	margin-top: 60px;
+	border-bottom: 2px #e08b44 solid;
+}
+
+#portfoliosPage .portfolioBox .imagesBox
+{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 30px 5px 30px 30px;
+	width: 600px;
+	box-sizing: border-box;
+}
+
+#portfoliosPage .portfolioBox .imagesBox .mainImage
+{
+	position: relative;
+	width: 100%;
+}
+
+#portfoliosPage .portfolioBox .imagesBox .mainImage img
+{
+	position: relative;
+	width: 95.5%;
+}
+
+#portfoliosPage .portfolioBox .imagesBox .image
+{
+	position: relative;
+	text-align: center;
+	width: calc(33% - 20px);
+	height: 120px;
+	margin: 15px 20px 0px 0px;
+	overflow: hidden;
+}
+
+#portfoliosPage .portfolioBox .imagesBox .image img
+{
+	position: relative;
+	height: 100%;
+}
+
+#portfoliosPage .portfolioBox .imagesBox .image .shadow
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+    font-family: calibri;
+    text-transform: uppercase;
+    background: rgba(224,139,68,0.9);
+    opacity: 0;
+    z-index: 3;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    cursor: pointer;
+}
+
+#portfoliosPage .portfolioBox .imagesBox .image .shadow:hover
+{
+    opacity: 1;
+}
+
+#portfoliosPage .portfolioBox .text
+{
+	position: relative;
+	width: 400px;
+	margin-top: 50px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+#portfoliosPage .portfolioBox .text .name
+{
+	position: relative;
+	font-size: 16px;
+	font-family: TPR;
+	color: #e08b44;
+}
+
+#portfoliosPage .portfolioBox .text .desc
+{
+	position: relative;
+	font-size: 14px;
+	font-family: calibri;
+	font-weight: 100;
+	color: #fff;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+#portfoliosPage .portfolioBox .text .l
+{
+	position: relative;
+	font-size: 14px;
+	font-family: TPR;
+	color: #e08b44;
+	margin-top: 10px;
+}
+
+#portfoliosPage .portfolioBox .text .l .val
+{
+	display: block;
+	position: relative;
+	font-size: 14px;
+	font-family: calibri;
+	font-weight: 100;
+	color: #fff;
+}
+
+#portfoliosPage .h2
+{
+	position: relative;
+	margin-top: 50px;
+	text-align: center;
+	font-size: 14px;
+	font-family: TPR;
+	color: #fff;
+}
+
+#portfoliosPage .allPortBox
+{
+	position: relative;
+	margin-top: 50px;
+	width: auto;
+	height: 150px;
+	display: flex;
+    justify-content: center;
+}
+
+#portfoliosPage .allPortBox .arrow
+{
+	position: relative;
+	width: 50px;
+	height: 100%;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+#portfoliosPage .allPortBox .arrow.left
+{
+	border-right: 2px solid #fff;
+	margin-right: 10px;
+}
+
+#portfoliosPage .allPortBox .arrow.left:before
+{
+	border: 10px solid rgba(0,0,0,0);
+	border-right: 10px solid #fff;
+}
+
+#portfoliosPage .allPortBox .arrow.right
+{
+	border-left: 2px solid #fff;
+	margin-left: 10px;
+}
+
+#portfoliosPage .allPortBox .arrow.right:before
+{
+	border: 10px solid rgba(0,0,0,0);
+	border-left: 10px solid #fff;
+}
+
+#portfoliosPage .allPortBox .arrow:before
+{
+	content: '';
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	transition: 0.3s;
+}
+
+#portfoliosPage .allPortBox .arrow:hover
+{
+	border-color: #e08b44;
+}
+
+#portfoliosPage .allPortBox .arrow.left:hover:before
+{
+	border-right: 10px solid #e08b44;
+}
+
+#portfoliosPage .allPortBox .arrow.right:hover:before
+{
+	border-left: 10px solid #e08b44;
+}
+
+#portfoliosPage .allPortBox .allPort
+{
+	position: relative;
+	width: auto;
+	display: flex;
+	justify-content: flex-start;
+	overflow: hidden;
+}
+
+#portfoliosPage .allPortBox .allPort .unit
+{
+	position: relative;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	margin: 0px 5px 0px 5px;
+}
+
+#portfoliosPage .allPortBox .allPort .unit.move
+{
+	transition: 0.5s;
+}
+
+#portfoliosPage .allPortBox .allPort .unit .name
+{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: rgba(224,139,68,0.8);
+    z-index: 4;
+    font-family: calibri;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 63px;
+    opacity: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#portfoliosPage .allPortBox .allPort .unit .name:hover
+{
+    opacity: 1;
+}
+
+#portfoliosPage .allPortBox .allPort .unit img
+{
+	position: relative;
+	height: 100%;
+}

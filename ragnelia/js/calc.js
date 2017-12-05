@@ -1,7 +1,7 @@
 //Расчет приблизительной стоимости и отправка формы
 
 
-var calcForm = document.querySelector('.calc-form');
+/*var calcForm = document.querySelector('.calc-form');
 var selectTypeR = calcForm.querySelector('#type_r');
 var selectType1 = calcForm.querySelector('#type_1');
 var selectType2 = calcForm.querySelector('#type_2');
@@ -20,6 +20,8 @@ var x = 0;
 var z = dataTypeR.length;
 var y = selectQ.length;
 var w = quant.length;
+
+
 
 var typePrice = [0, 69, 9000, 8, 1, 900, 199, 1, 9000, 3950];
 var typeСoefficient = [0, 0, 5, 10, 15, 0, 5, 10, 15, 0, 10, 20, 30, 0, 1690, 2450, 4300, 0, 5, 10, 15, 0, 5, 10, 15, 0, 15900, 39000, 49000, 0, 5, 10, 15, 0, 5, 10, 15];
@@ -88,4 +90,4 @@ var typeСoefficient = [0, 0, 5, 10, 15, 0, 5, 10, 15, 0, 10, 20, 30, 0, 1690, 2
 
 
       });
-    }
+    }*/

@@ -1,0 +1,102 @@
+#contact
+{
+	position: relative;
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+
+#contact .content 
+{
+	position: relative;
+	margin: auto;
+	max-width: 1000px;
+	color: #fff;
+}
+
+#contact .content .title
+{
+	position: relative;
+	text-align: center;
+	font-size: 24px;
+	font-family: TPR;
+}
+
+#contact .content .mapsBox
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	margin-top: 100px;
+}
+
+#contact .content .mapsBox .maps
+{
+	position: relative;
+	width: 70%;
+	min-height: 300px;
+	background: url(img/maps.jpg) no-repeat 100% center;
+}
+
+#contact .content .mapsBox .text
+{
+	position: relative;
+	margin: 30px 0 30px 30px;
+}
+
+#contact .content .mapsBox .text .unit
+{
+	position: relative;
+	font-size: 14px;
+	font-family: TPR;
+	color: #e08b44;
+	margin-bottom: 10px;
+}
+
+#contact .content .mapsBox .text .unit .val
+{
+	position: relative;
+	font-size: 14px;
+	font-family: calibri;
+	font-weight: 100;
+	color: #fff;
+}
+
+#contact .content .mapsBox .text .soc
+{
+	position: relative;
+	margin-top: 30px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+#contact .content .mapsBox .text .soc .unit
+{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+}
+
+#contact .content .mapsBox .text .soc .unit.inst
+{
+	background: url(img/soc.png) no-repeat;
+    background-size: 73px;
+    background-position: -2px -2px;
+}
+
+#contact .content .mapsBox .text .soc .unit.inst:hover
+{
+    background-position: -2px -35px;
+}
+
+#contact .content .mapsBox .text .soc .unit.vk
+{
+	background: url(img/soc.png) no-repeat;
+    background-size: 73px;
+    background-position: -41px -2px;
+}
+
+#contact .content .mapsBox .text .soc .unit.vk:hover
+{
+    background-position: -41px -35px;
+}

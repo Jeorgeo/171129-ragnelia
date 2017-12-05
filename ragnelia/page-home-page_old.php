@@ -12,57 +12,7 @@
  * @package ragnelia
  */
 
-get_header();
-
-$news = get_posts(
-		array(
-				'numberposts' => 100,
-				'offset' => 0,
-				'orderby'     => 'date',
-				'order'       => 'DESC',
-				'category' => '',
-				'include' => '',
-				'exclude' => '',
-				'meta_key' => '',
-				'meta_value' => '',
-				'post_type' => 'services',
-				'post_parent' => '',
-				'post_status' => 'publish'
-		)
-);
-$news_p = get_posts(
-		array(
-				'numberposts' => 100,
-				'offset' => 0,
-				'orderby'     => 'date',
-				'order'       => 'DESC',
-				'category' => '',
-				'include' => '',
-				'exclude' => '',
-				'meta_key' => '',
-				'meta_value' => '',
-				'post_type' => 'portfolio',
-				'post_parent' => '',
-				'post_status' => 'publish'
-		)
-);
-$news_r = get_posts(
-		array(
-				'numberposts' => 100,
-				'offset' => 0,
-				'orderby'     => 'date',
-				'order'       => 'DESC',
-				'category' => '',
-				'include' => '',
-				'exclude' => '',
-				'meta_key' => '',
-				'meta_value' => '',
-				'post_type' => 'reviews',
-				'post_parent' => '',
-				'post_status' => 'publish'
-		)
-);?>
-
+get_header(); ?>
 
 <div id="mainBanner">
 	<div class="content">
@@ -87,27 +37,95 @@ $news_r = get_posts(
 			<div class="text">Мы - рекламно-производственная компания полного цикла</div>
 		</div>
 		<div class="rightBlock">
-			<?php
-				foreach ($news as $obj) {
-					if($obj->post_name == 'archive') {
-							continue;
-					}
-			 ?>
-			 <a href="<?php echo $obj->post_name; ?>" target="_blank">
- 				<div class="unit">
- 					<div class="textBlock">
- 						<div class="title"><span><?php echo $obj->post_title; ?></span></div>
- 							<div class="property"><?php echo get_field('price',$obj->ID); ?></div>
- 							<div class="property"><?php echo get_field('making',$obj->ID); ?></div>
- 							<div class="property"><?php echo get_field('installation',$obj->ID); ?></div>
- 							<div class="property"><?php echo get_field('agreement',$obj->ID); ?></div>
- 					</div>
- 					<div class="img"><img src="<?php echo get_field('image',$obj->ID); ?>"></div>
- 				</div></a>
- 			<?php
- 				}
- 			 ?>
-
+			<div class="unit">
+				<div class="textBlock">
+					<div class="title">Объемные буквы</div>
+					<div class="property">Цена - от 49р/см</div>
+					<div class="property">Изготовление - от 2-х дней</div>
+					<div class="property">Монтаж - 1 день</div>
+					<div class="property">Согласование - бесплатно</div>
+				</div>
+				<img class="img" src="<?php bloginfo('template_url'); ?>//images/price/1.jpg">
+			</div>
+			<div class="unit">
+				<div class="textBlock">
+					<div class="title">Объемные буквы</div>
+					<div class="property">Цена - от 49р/см</div>
+					<div class="property">Изготовление - от 2-х дней</div>
+					<div class="property">Монтаж - 1 день</div>
+					<div class="property">Согласование - бесплатно</div>
+				</div>
+				<img class="img" src="<?php bloginfo('template_url'); ?>//images/price/2.jpg">
+			</div>
+			<div class="unit">
+				<div class="textBlock">
+					<div class="title">Объемные буквы</div>
+					<div class="property">Цена - от 49р/см</div>
+					<div class="property">Изготовление - от 2-х дней</div>
+					<div class="property">Монтаж - 1 день</div>
+					<div class="property">Согласование - бесплатно</div>
+				</div>
+				<img class="img" src="<?php bloginfo('template_url'); ?>//images/price/3.jpg">
+			</div>
+			<div class="unit">
+				<div class="textBlock">
+					<div class="title">Объемные буквы</div>
+					<div class="property">Цена - от 49р/см</div>
+					<div class="property">Изготовление - от 2-х дней</div>
+					<div class="property">Монтаж - 1 день</div>
+					<div class="property">Согласование - бесплатно</div>
+				</div>
+				<img class="img" src="<?php bloginfo('template_url'); ?>//images/price/4.jpg">
+			</div>
+			<div class="unit">
+				<div class="textBlock">
+					<div class="title">Объемные буквы</div>
+					<div class="property">Цена - от 49р/см</div>
+					<div class="property">Изготовление - от 2-х дней</div>
+					<div class="property">Монтаж - 1 день</div>
+					<div class="property">Согласование - бесплатно</div>
+				</div>
+				<img class="img" src="<?php bloginfo('template_url'); ?>//images/price/5.jpg">
+			</div>
+			<div class="unit">
+				<div class="textBlock">
+					<div class="title">Объемные буквы</div>
+					<div class="property">Цена - от 49р/см</div>
+					<div class="property">Изготовление - от 2-х дней</div>
+					<div class="property">Монтаж - 1 день</div>
+					<div class="property">Согласование - бесплатно</div>
+				</div>
+				<img class="img" src="<?php bloginfo('template_url'); ?>/images/price/5.jpg">
+			</div>
+			<div class="unit">
+				<div class="textBlock">
+					<div class="title">Объемные буквы</div>
+					<div class="property">Цена - от 49р/см</div>
+					<div class="property">Изготовление - от 2-х дней</div>
+					<div class="property">Монтаж - 1 день</div>
+					<div class="property">Согласование - бесплатно</div>
+				</div>
+				<img class="img" src="<?php bloginfo('template_url'); ?>/images/price/6.jpg">
+			</div>
+			<div class="unit">
+				<div class="textBlock">
+					<div class="title">Объемные буквы</div>
+					<div class="property">Цена - от 49р/см</div>
+					<div class="property">Изготовление - от 2-х дней</div>
+					<div class="property">Монтаж - 1 день</div>
+					<div class="property">Согласование - бесплатно</div>
+				</div>
+				<img class="img" src="<?php bloginfo('template_url'); ?>/images/price/7.jpg">
+			</div>
+			<div class="unit">
+				<div class="textBlock">
+					<div class="title">Объемные буквы</div>
+					<div class="property">Цена - от 49р/см</div>
+					<div class="property">Изготовление - от 2-х дней</div>
+					<div class="property">Монтаж - 1 день</div>
+					<div class="property">Согласование - бесплатно</div>
+				</div><img class="img" src="<?php bloginfo('template_url'); ?>/images/price/8.jpg">
+			</div>
 		</div>
 	</div>
 </div>
@@ -287,26 +305,30 @@ $news_r = get_posts(
 		<div class="title">Выполненые проекты</div>
 		<div class="sliderBox">
 			<div class="contentBox">
-				<?php
-					foreach ($news_p as $obj) {
-						if($obj->post_name == 'archive'){
-								continue;
-						}
-				 ?>
-
-					<div class="unit">
-						<img src="<?php echo get_field('image',$obj->ID); ?>" >
-						<div class="textBlock">
-							<div class="name t">Название проекта: <span class="val"><?php echo get_field('title_p',$obj->ID); ?></span></div>
-							<div class="adres t">Адрес проекта: <span class="val"><?php echo get_field('adress_p',$obj->ID); ?></span></div>
-							<div class="des t">Описание проекта: <span class="val"><?php echo get_field('description_p',$obj->ID); ?></span></div>
-						</div>
+				<div class="unit">
+					<div class="img"><img src="<?php bloginfo('template_url'); ?>/images/project/1.jpg"></div>
+					<div class="textBlock">
+						<div class="name t">Название проекта: <span class="val">Staples</span></div>
+						<div class="adres t">Адрес проекта: <span class="val">г. Москва, ул. Менжинского, 32к2</span></div>
+						<div class="des t">Описание проекта: <span class="val">Это лучший проект в мире потому что мы его сделали сами от нуля до самого старта и клиенту это принесло 10000$</span></div>
 					</div>
-
-				<?php
-					}
-				 ?>
-
+				</div>
+				<div class="unit">
+					<div class="img"><img src="<?php bloginfo('template_url'); ?>/images/project/1.jpg"></div>
+					<div class="textBlock">
+						<div class="name t">Название проекта: <span class="val">Staples</span></div>
+						<div class="adres t">Адрес проекта: <span class="val">г. Москва, ул. Менжинского, 32к2</span></div>
+						<div class="des t">Описание проекта: <span class="val">Это лучший проект в мире потому что мы его сделали сами от нуля до самого старта и клиенту это принесло 10000$</span></div>
+					</div>
+				</div>
+				<div class="unit">
+					<div class="img"><img src="<?php bloginfo('template_url'); ?>/images/project/1.jpg"></div>
+					<div class="textBlock">
+						<div class="name t">Название проекта: <span class="val">Staples</span></div>
+						<div class="adres t">Адрес проекта: <span class="val">г. Москва, ул. Менжинского, 32к2</span></div>
+						<div class="des t">Описание проекта: <span class="val">Это лучший проект в мире потому что мы его сделали сами от нуля до самого старта и клиенту это принесло 10000$</span></div>
+					</div>
+				</div>
 			</div>
 			<div class="doteds">
 				<div class="unit active">
@@ -315,7 +337,8 @@ $news_r = get_posts(
 				</div>
 				<div class="unit">
 				</div>
-			</div>	
+			</div>
+			<div class="button port"><span class="text">Наше портфолио</span></div>
 			<div class="button port cloud-link"><span class="text">Хочу также!</span></div>
 		</div>
 	</div>

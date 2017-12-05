@@ -15,18 +15,19 @@ var poleType1 = calcForm.querySelector('#pole-type_1');
 var poleType2 = calcForm.querySelector('#pole-type_2');
 var polePrice = calcForm.querySelector('#pole-price');
 var divPrice = calcForm.querySelector('#form-price');
+var calcResultForm = calcForm.querySelector('#calc-result');
 var x = 0;
 var z = dataTypeR.length;
 var y = selectQ.length;
-var m = quant.length;
+var w = quant.length;
 
 var typePrice = [0, 69, 9000, 8, 1, 900, 199, 1, 9000, 3950];
-var type2 = [0, 0, 5, 10, 15, 0, 5, 10, 15, 0, 10, 20, 30, 0, 1690, 2450, 4300, 0, 5, 10, 15, 0, 5, 10, 15, 0, 15900, 39000, 49000, 0, 5, 10, 15, 0, 5, 10, 15];
+var typeСoefficient = [0, 0, 5, 10, 15, 0, 5, 10, 15, 0, 10, 20, 30, 0, 1690, 2450, 4300, 0, 5, 10, 15, 0, 5, 10, 15, 0, 15900, 39000, 49000, 0, 5, 10, 15, 0, 5, 10, 15];
 
 
 
     for (var i = 0; i < z; i++) {
-      console.log(m);
+      console.log(w);
       dataTypeR[i].addEventListener('click', function(evt) {
         var self = evt.target;
 
@@ -60,17 +61,17 @@ var type2 = [0, 0, 5, 10, 15, 0, 5, 10, 15, 0, 10, 20, 30, 0, 1690, 2450, 4300, 
 
     var x1 = 0;
 
-    for (var i = 0; i < m; i++) {
+    for (var i = 0; i < w; i++) {
       quant[i].addEventListener('click', function(evt) {
         var self = evt.target;
 
-          var n = z;
+          var m = w;
 
-          while(n--) {
+          while(m--) {
 
-             if(quant[n] == self) {
+             if(quant[m] == self) {
 
-                x1 = n;
+                index = m;
 
                 break;
 
@@ -78,11 +79,13 @@ var type2 = [0, 0, 5, 10, 15, 0, 5, 10, 15, 0, 10, 20, 30, 0, 1690, 2450, 4300, 
 
           }
 
-          price = typePrice[x] * type2[x1];
+          calcResultForm.classList.remove('price-block');
 
-          console.log(typePrice[x], type2[x1], x, x1);
+          price = typePrice[x] * typeСoefficient[index];
 
-          divPrice.innerText = price + 'р';
+          divPrice.innerText = price + ' р';
+
+
 
       });
     }

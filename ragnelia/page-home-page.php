@@ -19,7 +19,7 @@ get_header(); ?>
 		<div class="title">Изготовление наружной рекламы<br>в Москве и Области от 49р/см</div>
 		<div class="panelButton">
 			<div class="text">Проект, изготовление, согласование и монтаж наружной<br>рекламы за 5 дней в Москве и Московской области по цене от 49р/см</div>
-			<div class="button callback"><span class="text">Заказать звонок</span></div>
+			<div class="button callback cloud-link"><span class="text">Заказать звонок</span></div>
 		</div>
 		<div class="arrowBlock">
 			<div class="arrow">
@@ -105,7 +105,7 @@ get_header(); ?>
 					<div class="property">Монтаж - 1 день</div>
 					<div class="property">Согласование - бесплатно</div>
 				</div>
-				<img class="img" src="<?php bloginfo('template_url'); ?>//images/price/6.jpg">
+				<img class="img" src="<?php bloginfo('template_url'); ?>/images/price/6.jpg">
 			</div>
 			<div class="unit">
 				<div class="textBlock">
@@ -115,7 +115,7 @@ get_header(); ?>
 					<div class="property">Монтаж - 1 день</div>
 					<div class="property">Согласование - бесплатно</div>
 				</div>
-				<img class="img" src="<?php bloginfo('template_url'); ?>//images/price/7.jpg">
+				<img class="img" src="<?php bloginfo('template_url'); ?>/images/price/7.jpg">
 			</div>
 			<div class="unit">
 				<div class="textBlock">
@@ -124,54 +124,128 @@ get_header(); ?>
 					<div class="property">Изготовление - от 2-х дней</div>
 					<div class="property">Монтаж - 1 день</div>
 					<div class="property">Согласование - бесплатно</div>
-				</div><img class="img" src="<?php bloginfo('template_url'); ?>//images/price/8.jpg">
+				</div><img class="img" src="<?php bloginfo('template_url'); ?>/images/price/8.jpg">
 			</div>
 		</div>
 	</div>
 </div>
 <div id="calc">
-	<div class="content">
-		<div class="title">Расчитайте стоимость рекламы за 2 минуты!</div>
-		<div class="h2">заполните поля и узнайте стоимость</div>
-		<div class="calcBlock">
-			<div class="inputs">
-				<div class="input">
-					<div class="units">
-						<div class="unit select">Тип рекламы</div>
-						<div class="unit active" name="test">Объемные буквы</div>
-						<div class="unit active" name="test2">Композитные вывески</div>
-						<div class="unit active" name="test">Объемные буквы</div>
-						<div class="unit active" name="test2">Композитные вывески</div>
+	<form class="calc-form" method="post">
+		<div class="content">
+			<div class="title">Расчитайте стоимость рекламы за 2 минуты!</div>
+			<div class="h2">заполните поля и узнайте стоимость</div>
+			<div class="calcBlock">
+				<div class="inputs">
+					<div class="input">
+						<div id="type_r" class="units">
+							<div class="type_r unit select">Тип рекламы</div>
+							<div class="type_r unit active" name="test">Буквы:</div>
+							<div class="type_r unit active" name="test">Световые лайтбоксы:</div>
+							<div class="type_r unit active" name="test">Визитки, полиграфия:</div>
+							<div class="type_r unit active" name="test">Штендеры:</div>
+							<div class="type_r unit active" name="test">Информационные панели:</div>
+							<div class="type_r unit active" name="test">Интерьерная печать:</div>
+							<div class="type_r unit active" name="test">Сайты:</div>
+							<div class="type_r unit active" name="test">Световые панель-кронштейны:</div>
+							<div class="type_r unit active" name="test">Панель-кронштейны:</div>
+
+						</div>
+					</div>
+					<div class="input noArrow">
+						<input type="text" name="adres" placeholder="Адрес размещения">
+					</div>
+					<div class="input">
+						<div id="type_1" class="units">
+							<div class="type_1 unit select">Параметр №1</div>
+							<div class="type_1 unit active" name="test">ВЫСОТА(см)</div>
+							<div class="type_1 unit active" name="test">ВЫСОТА(см)</div>
+							<div class="type_1 unit active" name="test">ТИРАЖ (количество)</div>
+							<div class="type_1 unit active" name="test">РАЗМЕР</div>
+							<div class="type_1 unit active" name="test">РАЗМЕР(квадратный метр)</div>
+							<div class="type_1 unit active" name="test">РАЗМЕР(квадратный метр)</div>
+							<div class="type_1 unit active" name="test">ТИП САЙТА</div>
+							<div class="type_1 unit active" name="test">РАЗМЕР (квадратный метр)</div>
+							<div class="type_1 unit active" name="test">РАЗМЕР (квадратный метр)</div>
+						</div>
+					</div>
+					<div class="input">
+						<div id="type_2" class="units">
+							<div class="price-block block_active">
+								<div class="type_2 unit select">Параметр №2</div>
+							</div>
+							<div class="price-block">
+								<div class="type_2 unit select">Параметр №2</div>
+								<div class="type_2 unit active" name="test">5</div>
+								<div class="type_2 unit active" name="test2">10</div>
+								<div class="type_2 unit active" name="test2">15</div>
+							</div>
+							<div class="price-block">
+								<div class="type_2 unit select">Параметр №2</div>
+								<div class="type_2 unit active" name="test">5</div>
+								<div class="type_2 unit active" name="test2">10</div>
+								<div class="type_2 unit active" name="test2">15</div>
+							</div>
+							<div class="price-block">
+								<div class="type_2 unit select">Параметр №2</div>
+								<div class="type_2 unit active" name="test">10</div>
+								<div class="type_2 unit active" name="test2">20</div>
+								<div class="type_2 unit active" name="test2">30</div>
+							</div>
+							<div class="price-block">
+								<div class="type_2 unit select">Параметр №2</div>
+								<div class="type_2 unit active" name="test">малый</div>
+								<div class="type_2 unit active" name="test2">средний</div>
+								<div class="type_2 unit active" name="test2">большой</div>
+							</div>
+							<div class="price-block">
+								<div class="type_2 unit select">Параметр №2</div>
+								<div class="type_2 unit active" name="test">5</div>
+								<div class="type_2 unit active" name="test2">10</div>
+								<div class="type_2 unit active" name="test2">15</div>
+							</div>
+							<div class="price-block">
+								<div class="type_2 unit select">Параметр №2</div>
+								<div class="type_2 unit active" name="test">5</div>
+								<div class="type_2 unit active" name="test2">10</div>
+								<div class="type_2 unit active" name="test2">15</div>
+							</div>
+							<div class="price-block">
+								<div class="type_2 unit select">Параметр №2</div>
+								<div class="type_2 unit active" name="test">Landing-page</div>
+								<div class="type_2 unit active" name="test2">Корпоративный</div>
+								<div class="type_2 unit active" name="test2">Магазин</div>
+							</div>
+							<div class="price-block">
+								<div class="type_2 unit select">Параметр №2</div>
+								<div class="type_2 unit active" name="test">5</div>
+								<div class="type_2 unit active" name="test2">10</div>
+								<div class="type_2 unit active" name="test2">15</div>
+							</div>
+							<div class="price-block">
+								<div class="type_2 unit select">Параметр №2</div>
+								<div class="type_2 unit active" name="test">5</div>
+								<div class="type_2 unit active" name="test2">10</div>
+								<div class="type_2 unit active" name="test2">15</div>
+							</div>
+
+						</div>
 					</div>
 				</div>
-				<div class="input noArrow">
-					<input type="text" name="adres" placeholder="Адрес размещения">
+				<div class="itog">
+					Ориентировочная стоимость: <span id="form-price" class="count">1000р.</span>
 				</div>
-				<div class="input">
-					<div class="units">
-						<div class="unit select">Параметр №1</div>
-						<div class="unit active" name="test">Объемные буквы</div>
-						<div class="unit active" name="test2">Композитные вывески</div>
-					</div>
+				<div class="h3">Для более точного расчета цены и сроков - оставьте заявку</div>
+				<div class="boxInputs">
+					<input type="text" class="phone" name="phone" placeholder="Контактный телефон*"><div class="button submit"><span class="text">Отправить заявку</span></div>
 				</div>
-				<div class="input">
-					<div class="units">
-						<div class="unit select">Параметр №2</div>
-						<div class="unit active" name="test">Объемные буквы</div>
-						<div class="unit active" name="test2">Композитные вывески</div>
-					</div>
-				</div>
+				<div class="dopText">Нажимая кнопку, вы соглашаетесь на<br><span class="persOpen">обработку персональных данных.</span></div>
 			</div>
-			<div class="itog">
-				Ориентировочная стоимость: <span class="count">1000р.</span>
-			</div>
-			<div class="h3">Для более точного расчета цены и сроков - оставьте заявку</div>
-			<div class="boxInputs">
-				<input type="text" class="phone" name="phone" placeholder="Контактный телефон*"><div class="button submit"><span class="text">Отправить заявку</span></div>
-			</div>
-			<div class="dopText">Нажимая кнопку, вы соглашаетесь на<br><span class="persOpen">обработку персональных данных.</span></div>
 		</div>
-	</div>
+		<input id="pole-type_r" type="hidden" name="type_r" value="">
+		<input id="pole-type_1" type="hidden" name="type_1" value="">
+		<input id="pole-type_2" type="hidden" name="type_2" value="">
+		<input id="pole-price" type="hidden" name="price" value="">
+	</form>
 </div>
 <div id="clients">
 	<div class="line1"></div>
@@ -263,6 +337,7 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="button port"><span class="text">Наше портфолио</span></div>
+			<div class="button port cloud-link"><span class="text">Хочу также!</span></div>
 		</div>
 	</div>
 </div>

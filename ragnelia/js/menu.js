@@ -18,19 +18,6 @@ function moveMenu(){
       }
 };
 
-//scroll
-
-$("a[href*=#top]").on("click", function(e){
-        var anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $(anchor.attr('href')).offset().top
-        }, 777);
-        e.preventDefault();
-        return false;
-    });
-
-});
-
 // popup windows
 
 var popup = document.querySelector(".popup-question");
@@ -38,12 +25,17 @@ var popupS = document.querySelector(".popup-question-s")
 var openBtn = document.querySelectorAll(".cloud-link");
 var closeBtn = document.querySelectorAll(".popup-question-close");
 var winPopup = document.querySelector(".wrap");
-var i = 0;
-var k = 0;
-var x = 0;
-var y = 0;
+
+for (var i = 0; i < closeBtn.length; i++) {
+  console.log(closeBtn[i]);
+}
 
 
+
+function showPopup() {
+  winPopup.classList.add("modal-content-show");
+  popup.classList.add("modal-content-show");
+};
 
 function showThank() {
   winPopup.classList.add("modal-content-show");
@@ -75,13 +67,27 @@ function removePopup() {
 
 };
 
-  close.addEventListener("click", function(event) {
+for (var i = 0; i < openBtn.length; i++) {
+  openBtn[i].addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    showPopup();
+
+  });
+}
+
+for (var i = 0; i < closeBtn.length; i++) {
+  closeBtn[i].addEventListener("click", function(event) {
 
     event.preventDefault();
 
     removePopup();
 
+    console.log('test');
+
   });
+}
 
 window.addEventListener("keydown", function(event) {
 

@@ -1,3 +1,263 @@
+/*!
+Theme Name: ragnelia
+Theme URI: http://underscores.me/
+Author: hmwebs.ru
+Author URI: http://hmwebs.ru
+Description: Description
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: ragnelia
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ragnelia is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Fonts
+# Normalize
+# Animation
+# Typography
+# Content
+# Footer
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Fonts
+--------------------------------------------------------------*/
+
+@font-face {
+	font-family: TPR; /* Гарнитура шрифта */
+	src: url(font/TPR.otf); /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+	font-family: TPB; /* Гарнитура шрифта */
+	src: url(font/TPB.otf); /* Путь к файлу со шрифтом */
+}
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	vertical-align: baseline;
+}
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+[hidden],
+template {
+	display: none;
+}
+
+a {
+	background-color: transparent;
+}
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+b,
+strong {
+	font-weight: bold;
+}
+
+dfn {
+	font-style: italic;
+}
+
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -0.5em;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+img {
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 1em 40px;
+}
+
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+pre {
+	overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}
+
+button {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input {
+	line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+	border: 0;
+	padding: 0;
+}
+
+textarea {
+	overflow: auto;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+td,
+th {
+	padding: 0;
+}
+
 /*--------------------------------------------------------------
 # Animation
 --------------------------------------------------------------*/
@@ -46,6 +306,28 @@
   bottom: -6px;}
 }
 
+@keyframes jumpArrow{
+	0%{
+		transform: translateY(0px);
+	}
+	25%{
+		transform: translateY(5px);
+	}
+	50%{
+		transform: translateY(0px);
+	}
+	75%{
+		transform: translateY(5px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
 body
 {
 	margin: 0;
@@ -64,6 +346,10 @@ img {
   max-width: 1200px;
   margin: auto;
 }
+
+/*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
 
 #menu
 {
@@ -291,23 +577,7 @@ img {
     padding: 12px 60px 15px 60px;
 }
 
-@keyframes jumpArrow{
-	0%{
-		transform: translateY(0px);
-	}
-	25%{
-		transform: translateY(5px);
-	}
-	50%{
-		transform: translateY(0px);
-	}
-	75%{
-		transform: translateY(5px);
-	}
-	100%{
-		transform: translateY(0px);
-	}
-}
+
 
 .arrowBlock
 {
@@ -1264,7 +1534,1618 @@ img {
 	color: #000;
 }
 
-/*////*/
+/*--------------------------------------------------------------
+# Price
+--------------------------------------------------------------*/
+
+#price
+{
+	position: relative;
+	margin-top: 200px;
+}
+
+#price .content
+{
+	position: relative;
+	max-width: 1000px;
+	padding: 0 20px 0 20px;
+	margin: auto;
+	color: #fff;
+}
+
+#price .content .title
+{
+	position: relative;
+	font-size: 24px;
+	font-family: TPR;
+	text-align: center;
+}
+
+#price .content .pricesBox
+{
+	position: relative;
+	width: 100%;
+	margin-top: 100px;
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+#price .content .pricesBox .unit
+{
+	position: relative;
+	width: 200px;
+	height: 200px;
+	margin: 15px;
+	overflow: hidden;
+}
+
+#price .content .pricesBox .unit .text
+{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	padding: 15px;
+	left: 0;
+	top: 0;
+	overflow: hidden;
+	box-sizing: border-box;
+	background: rgba(224,139,68,0.9);
+	transition: 0.5s;
+	transform: translateY(120px);
+	z-index: 3;
+}
+
+#price .content .pricesBox .unit .text .title
+{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	height: 80px;
+	width: 100%;
+	padding: 15px;
+	box-sizing: border-box;
+	left: 0;
+	top: 0;
+	transition: 0.5s;
+	font-size: 20px;
+	color: #fff;
+	text-decoration: none;
+	text-align: left;
+}
+
+#price .content .pricesBox .unit .text .desc
+{
+	position: absolute;
+	width: 100%;
+	height: 120px;
+	padding: 0px 15px 10px 15px;
+	box-sizing: border-box;
+	left: 0;
+	bottom: 0;
+	color: #fff;
+	font-size: 14px;
+	font-family: calibri;
+	font-weight: 100;
+}
+
+#price .content .pricesBox .unit:hover > .text
+{
+	transform: translateY(0px);
+}
+
+#price .content .pricesBox .unit .img
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+
+#price .content .pricesBox .unit .img img
+{
+	position: relative;
+	height: 100%;
+}
+
+#price .priceBox
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	padding-bottom: 20px;
+	margin-top: 60px;
+	border-bottom: 2px #e08b44 solid;
+}
+
+#price .priceBox .imagesBox
+{
+	position: relative;
+	padding: 0px 5px 30px 30px;
+	width: 560px;
+	box-sizing: border-box;
+}
+
+#price .priceBox .imagesBox .mainImage
+{
+	position: relative;
+	width: 100%;
+}
+
+#price .priceBox .imagesBox .mainImage img
+{
+	position: relative;
+	width: 100%;
+}
+
+#price .priceBox .imagesBox .panel
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+}
+
+
+#price .priceBox .imagesBox .arrow
+{
+	position: relative;
+    top: 0;
+    right: 0;
+    height: 110px;
+    width: 30px;
+    margin: 15px 0 0 0;
+    background: #fff;
+    opacity: 0.5;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#price .priceBox .imagesBox .arrow:before
+{
+	content: '';
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+    border: 10px solid rgba(0,0,0,0);
+    border-left: 10px #000 solid;
+}
+
+#price .priceBox .imagesBox .arrow.left
+{
+	margin-right: 10px;
+}
+
+#price .priceBox .imagesBox .arrow.right
+{
+	margin-left: 10px;
+}
+
+#price .priceBox .imagesBox .arrow.left:before
+{
+	border: 10px solid rgba(0,0,0,0);
+	border-right: 10px #000 solid;
+}
+
+#price .priceBox .imagesBox .arrow.left:hover
+{
+	opacity: 1;
+	background: #e08b44;
+}
+
+#price .priceBox .imagesBox .arrow.right:hover
+{
+	opacity: 1;
+	background: #e08b44;
+}
+
+#price .priceBox .imagesBox .imageBox
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: calc(100% - 80px);
+	height: 110px;
+	overflow: hidden;
+	margin-top: 15px;
+}
+
+#price .priceBox .imagesBox .imageBox .image
+{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	margin: 0 5px 0 5px;
+}
+
+#price .priceBox .imagesBox .imageBox .image.move
+{
+	transition: 0.5s;
+}
+
+
+#price .priceBox .imagesBox .image img
+{
+	position: relative;
+	height: 100%;
+	pointer-events: none;
+}
+
+#price .priceBox .imagesBox .image .shadow
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+    font-family: calibri;
+    text-transform: uppercase;
+    background: rgba(224,139,68,0.9);
+    opacity: 0;
+    z-index: 3;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    -ms-user-select: none;
+}
+
+#price .priceBox .imagesBox .image .shadow:hover
+{
+    opacity: 1;
+}
+
+#price .priceBox .text
+{
+	position: relative;
+	width: 400px;
+	margin-top: 25px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+#price .priceBox .text .name
+{
+	position: relative;
+	font-size: 16px;
+	font-family: TPR;
+	color: #e08b44;
+}
+
+#price .priceBox .text .desc
+{
+	position: relative;
+	font-size: 14px;
+	font-family: calibri;
+	font-weight: 100;
+	color: #fff;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+#price .priceBox .text .l
+{
+	position: relative;
+	font-size: 14px;
+	font-family: TPR;
+	color: #e08b44;
+	margin-top: 10px;
+}
+
+#price .priceBox .text .l .val
+{
+	display: block;
+	position: relative;
+	font-size: 14px;
+	font-family: calibri;
+	font-weight: 100;
+	color: #fff;
+}
+
+#price .priceBox .text .calc
+{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-top: 30px;
+}
+
+#price .priceBox .text .calc .title
+{
+	position: relative;
+	width: 100%;
+	font-size: 16px;
+	font-family: TPR;
+	color: #e08b44;
+	text-align: left;
+}
+
+#price .priceBox .text .calc .calcBlock
+{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	margin-top: 15px;
+}
+
+#price .priceBox .text .calc .calcBlock .adres
+{
+	position: relative;
+	width: 100%;
+	height: 35px;
+	border: 1px #fff solid;
+	background: none;
+	padding: 10px;
+	box-sizing: border-box;
+	color: #fff;
+	font-size: 14px;
+	font-family: calibri;
+	font-weight: 100;
+	margin-bottom: 15px;
+	transition: 0.3s;
+}
+
+#price .priceBox .text .calc .calcBlock .adres:hover
+{
+	border-color: #e08b44;
+}
+
+#price .priceBox .text .calc .calcBlock .adres:focus
+{
+	outline: none;
+	border-color: #e08b44;
+}
+
+#price .priceBox .text .calc .calcBlock .adres.okey
+{
+    border: 1px solid #e08b44;
+    background: #e08b44;
+}
+
+#price .priceBox .text .calc .calcBlock .input
+{
+	position: relative;
+	width: 180px;
+	height: 35px;
+	border: 1px #fff solid;
+	transition: 0.3s;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+#price .priceBox .text .calc .calcBlock .input:last-child
+{
+	margin-left: 20px;
+}
+
+#price .priceBox .text .calc .calcBlock .input.okey
+{
+	border: 1px solid #e08b44;
+	background: #e08b44;
+}
+
+#price .priceBox .text .calc .calcBlock .input .units
+{
+	position: absolute;
+	width: 100%;
+	height: 35px;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	transition: 0.3s;
+}
+
+#price .priceBox .text .calc .calcBlock .input.open .units
+{
+	width: 100%;
+	left: -1px;
+	top: -1px;
+	overflow: all;
+	border: 1px #e08b44 solid;
+	background: #000;
+	z-index: 6;
+}
+
+#price .priceBox .text .calc .calcBlock .input.open .units .select
+{
+	background: #e08b44;
+}
+
+#price .priceBox .text .calc .calcBlock .input:hover
+{
+	border-color: #e08b44;
+}
+
+#price .priceBox .text .calc .calcBlock .input.okey:hover
+{
+	border: 1px solid #e08b44;
+	background: rgba(224,139,68,0.5);
+}
+
+#price .priceBox .text .calc .calcBlock .input.hover
+{
+	border-color: #e08b44;
+}
+
+#price .priceBox .text .calc .calcBlock .input.open
+{
+	border-color: #e08b44;
+	transition: 1s;
+	overflow: all;
+	height: auto;
+}
+
+#price .priceBox .text .calc .calcBlock .input:before
+{
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 14px;
+    border: 5px solid transparent;
+    border-top: 8px solid #fff;
+    transition: 1s;
+    z-index: 5;
+}
+
+#price .priceBox .text .calc .calcBlock .input.noArrow
+{
+    cursor: text;
+}
+
+#price .priceBox .text .calc .calcBlock .input.noArrow:before
+{
+    display: none;
+}
+
+#price .priceBox .text .calc .calcBlock .input.open:before
+{
+	transform-origin: 50% 25%;
+	transform: rotate(180deg);
+	z-index: 10;
+}
+
+#price .priceBox .text .calc .calcBlock .input .unit
+{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 14px;
+	font-family: calibri;
+
+}
+
+#price .priceBox .text .calc .calcBlock .input.open .unit
+{
+	height: 35px;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+#price .priceBox .text .calc .calcBlock .input.open .unit:not(.select):hover
+{
+	background: rgba(224,139,68,0.5);
+}
+
+#price .priceBox .text .calc .itog
+{
+	position: relative;
+	margin-top: 15px;
+	font-size: 16px;
+	font-family: TPR;
+	text-align: left;
+}
+
+#price .priceBox .text .calc .itog .count
+{
+	color: rgba(224,139,68,1);
+}
+
+#price .priceBox .text .calc .h3
+{
+	position: relative;
+	margin-top: 15px;
+	font-family: calibri;
+	font-size: 14px;
+	font-weight: 100;
+	text-align: center;
+}
+
+#price .priceBox .text .calc .boxInputs
+{
+	position: relative;
+	width: auto;
+	margin: auto;
+	text-align: center;
+	margin-top: 10px;
+}
+
+#price .priceBox .text .calc input.phone
+{
+	position: relative;
+	width: 220px;
+	height: 35px;
+	background: none;
+	border: 1px #fff solid;
+	color: #fff;
+	outline: none;
+	padding: 10px;
+	box-sizing: border-box;
+	margin-right: 10px;
+}
+
+#price .priceBox .text .calc input.phone:hover
+{
+	border: 1px #e08b44 solid;
+}
+
+#price .priceBox .text .calc input.phone:focus
+{
+	border: 1px #e08b44 solid;
+}
+
+#price .priceBox .text .calc .button.submit
+{
+	position: relative;
+    width: 150px;
+    height: 35px;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: top;
+    padding-top: 7px;
+    box-sizing: border-box;
+}
+
+#price .priceBox .text .calc .button.submit .text
+{
+	position: relative;
+    padding: 0;
+}
+
+#price .priceBox .text .calc .dopText
+{
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+	font-size: 11px;
+	font-family: calibri;
+	font-weight: 100;
+	text-align: center;
+	opacity: 0.5;
+}
+
+#price .priceBox .text .calc .dopText .persOpen
+{
+	text-decoration: underline;
+}
+
+#price .h2
+{
+	position: relative;
+	margin-top: 50px;
+	text-align: center;
+	font-size: 14px;
+	font-family: TPR;
+	color: #fff;
+}
+
+#price .allPriceBox
+{
+	position: relative;
+	margin-top: 50px;
+	width: 100%;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+}
+
+#price .allPriceBox .arrow
+{
+	position: relative;
+	width: 50px;
+	height: 100%;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+#price .allPriceBox .arrow.left
+{
+	border-right: 2px solid #fff;
+	margin-right: 10px;
+}
+
+#price .allPriceBox .arrow.left:before
+{
+	border: 10px solid rgba(0,0,0,0);
+	border-right: 10px solid #fff;
+}
+
+#price .allPriceBox .arrow.right
+{
+	border-left: 2px solid #fff;
+	margin-left: 10px;
+}
+
+#price .allPriceBox .arrow.right:before
+{
+	border: 10px solid rgba(0,0,0,0);
+	border-left: 10px solid #fff;
+}
+
+#price .allPriceBox .arrow:before
+{
+	content: '';
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	transition: 0.3s;
+}
+
+#price .allPriceBox .arrow:hover
+{
+	border-color: #e08b44;
+}
+
+#price .allPriceBox .arrow.left:hover:before
+{
+	border-right: 10px solid #e08b44;
+}
+
+#price .allPriceBox .arrow.right:hover:before
+{
+	border-left: 10px solid #e08b44;
+}
+
+#price .allPriceBox .allPrice
+{
+	position: relative;
+	width: auto;
+	display: flex;
+	justify-content: flex-start;
+	overflow: hidden;
+}
+
+#price .allPriceBox .allPrice .unit
+{
+	position: relative;
+	height: 150px;
+	width: 150px;
+	display: flex;
+	justify-content: center;
+	margin: 0px 5px 0px 5px;
+}
+
+#price .allPriceBox .allPrice .unit.move
+{
+	transition: 0.5s;
+}
+
+#price .allPriceBox .allPrice .unit .text
+{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: rgba(224,139,68,0.8);
+    z-index: 4;
+    font-family: calibri;
+    font-size: 14px;
+    font-weight: 100;
+    text-align: center;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: 0.3s;
+    cursor: pointer;
+    transform: translateY(105px);
+}
+
+#price .allPriceBox .allPrice .unit .text .title
+{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	height: 50px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+	left: 0;
+	top: 0;
+	transition: 0.5s;
+	font-size: 15px;
+	color: #fff;
+	text-decoration: none;
+	text-align: left;
+}
+
+#price .allPriceBox .allPrice .unit .text .desc
+{
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	padding: 0px 10px 10px 10px;
+	box-sizing: border-box;
+	left: 0;
+	bottom: 0;
+	color: #fff;
+	font-size: 11px;
+	font-family: calibri;
+	font-weight: 100;
+	text-align: left;
+}
+
+#price .allPriceBox .allPrice .unit .text .desc .property
+{
+	position: relative;
+	margin-bottom: 3px;
+}
+
+#price .allPriceBox .allPrice .unit:hover > .text
+{
+	transform: translateY(0px);
+}
+
+#price .allPriceBox .allPrice .unit .img
+{
+	position: relative;
+	overflow: hidden;
+}
+
+#price .allPriceBox .allPrice .unit img
+{
+	position: relative;
+	height: 100%;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+
+#portfoliosPage
+{
+	position: relative;
+	margin-top: 200px;
+}
+
+#portfoliosPage .content
+{
+	position: relative;
+	margin: auto;
+	max-width: 1000px;
+	color: #fff;
+}
+
+#portfoliosPage .content .title
+{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	font-size: 24px;
+	font-family: TPR;
+}
+
+#portfoliosPage .content .portBox
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 80px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+#portfoliosPage .content .portBox .unit
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 300px;
+	height: 300px;
+	margin: 10px;
+	overflow: hidden;
+}
+
+#portfoliosPage .content .portBox .unit .name
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 300px;
+	height: 300px;
+	background: rgba(224,139,68,0.8);
+	color: #fff;
+	z-index: 3;
+	font-size: 20px;
+	font-family: TPR;
+	transition: 0.5s;
+	opacity: 0;
+	cursor: pointer;
+}
+
+#portfoliosPage .content .portBox .unit:hover > .name
+{
+	opacity: 1;
+}
+
+#portfoliosPage .content .portBox .unit img
+{
+	position: relative;
+	height: 100%;
+}
+
+#portfoliosPage .portfolioBox
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	padding-bottom: 20px;
+	margin-top: 60px;
+	border-bottom: 2px #e08b44 solid;
+}
+
+#portfoliosPage .portfolioBox .imagesBox
+{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 30px 5px 30px 30px;
+	width: 600px;
+	box-sizing: border-box;
+}
+
+#portfoliosPage .portfolioBox .imagesBox .mainImage
+{
+	position: relative;
+	width: 100%;
+}
+
+#portfoliosPage .portfolioBox .imagesBox .mainImage img
+{
+	position: relative;
+	width: 95.5%;
+}
+
+#portfoliosPage .portfolioBox .imagesBox .image
+{
+	position: relative;
+	text-align: center;
+	width: calc(33% - 20px);
+	height: 120px;
+	margin: 15px 20px 0px 0px;
+	overflow: hidden;
+}
+
+#portfoliosPage .portfolioBox .imagesBox .image img
+{
+	position: relative;
+	height: 100%;
+}
+
+#portfoliosPage .portfolioBox .imagesBox .image .shadow
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+    font-family: calibri;
+    text-transform: uppercase;
+    background: rgba(224,139,68,0.9);
+    opacity: 0;
+    z-index: 3;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    cursor: pointer;
+}
+
+#portfoliosPage .portfolioBox .imagesBox .image .shadow:hover
+{
+    opacity: 1;
+}
+
+#portfoliosPage .portfolioBox .text
+{
+	position: relative;
+	width: 400px;
+	margin-top: 50px;
+    padding-right: 30px;
+    box-sizing: border-box;
+}
+
+#portfoliosPage .portfolioBox .text .name
+{
+	position: relative;
+	font-size: 16px;
+	font-family: TPR;
+	color: #e08b44;
+}
+
+#portfoliosPage .portfolioBox .text .desc
+{
+	position: relative;
+	font-size: 14px;
+	font-family: calibri;
+	font-weight: 100;
+	color: #fff;
+	margin-top: 15px;
+	margin-bottom: 5px;
+}
+
+#portfoliosPage .portfolioBox .text .l
+{
+	position: relative;
+	font-size: 14px;
+	font-family: TPR;
+	color: #e08b44;
+	margin-top: 10px;
+}
+
+#portfoliosPage .portfolioBox .text .l .val
+{
+	display: block;
+	position: relative;
+	font-size: 14px;
+	font-family: calibri;
+	font-weight: 100;
+	color: #fff;
+}
+
+#portfoliosPage .h2
+{
+	position: relative;
+	margin-top: 50px;
+	text-align: center;
+	font-size: 14px;
+	font-family: TPR;
+	color: #fff;
+}
+
+#portfoliosPage .allPortBox
+{
+	position: relative;
+	margin-top: 50px;
+	width: auto;
+	height: 150px;
+	display: flex;
+    justify-content: center;
+}
+
+#portfoliosPage .allPortBox .arrow
+{
+	position: relative;
+	width: 50px;
+	height: 100%;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+#portfoliosPage .allPortBox .arrow.left
+{
+	border-right: 2px solid #fff;
+	margin-right: 10px;
+}
+
+#portfoliosPage .allPortBox .arrow.left:before
+{
+	border: 10px solid rgba(0,0,0,0);
+	border-right: 10px solid #fff;
+}
+
+#portfoliosPage .allPortBox .arrow.right
+{
+	border-left: 2px solid #fff;
+	margin-left: 10px;
+}
+
+#portfoliosPage .allPortBox .arrow.right:before
+{
+	border: 10px solid rgba(0,0,0,0);
+	border-left: 10px solid #fff;
+}
+
+#portfoliosPage .allPortBox .arrow:before
+{
+	content: '';
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	transition: 0.3s;
+}
+
+#portfoliosPage .allPortBox .arrow:hover
+{
+	border-color: #e08b44;
+}
+
+#portfoliosPage .allPortBox .arrow.left:hover:before
+{
+	border-right: 10px solid #e08b44;
+}
+
+#portfoliosPage .allPortBox .arrow.right:hover:before
+{
+	border-left: 10px solid #e08b44;
+}
+
+#portfoliosPage .allPortBox .allPort
+{
+	position: relative;
+	width: auto;
+	display: flex;
+	justify-content: flex-start;
+	overflow: hidden;
+}
+
+#portfoliosPage .allPortBox .allPort .unit
+{
+	position: relative;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	margin: 0px 5px 0px 5px;
+}
+
+#portfoliosPage .allPortBox .allPort .unit.move
+{
+	transition: 0.5s;
+}
+
+#portfoliosPage .allPortBox .allPort .unit .name
+{
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: rgba(224,139,68,0.8);
+    z-index: 4;
+    font-family: calibri;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 63px;
+    opacity: 0;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#portfoliosPage .allPortBox .allPort .unit .name:hover
+{
+    opacity: 1;
+}
+
+#portfoliosPage .allPortBox .allPort .unit img
+{
+	position: relative;
+	height: 100%;
+}
+
+/*--------------------------------------------------------------
+# Opinion
+--------------------------------------------------------------*/
+
+#opinionPage
+{
+	position: relative;
+	margin-top: 200px;
+}
+
+#opinionPage .content
+{
+	position: relative;
+	margin: auto;
+	max-width: 1000px;
+	color: #fff;
+}
+
+#opinionPage .content .title
+{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	font-size: 24px;
+	font-family: TPR;
+}
+
+#opinionPage .content .opinionBox
+{
+	position: relative;
+	margin-top: 100px;
+}
+
+#opinionPage .content .opinionBox .unit
+{
+	position: relative;
+	display: flex;
+	width: 100%;
+	border-bottom: 2px #e08b44 solid;
+	padding: 0px 30px 30px 30px;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+}
+
+#opinionPage .content .opinionBox .unit:last-child
+{
+	border-bottom: 0px #e08b44 solid;
+}
+
+#opinionPage .content .opinionBox .unit .img
+{
+	position: relative;
+	width: 250px;
+}
+
+#opinionPage .content .opinionBox .unit .img img
+{
+	width: 100%;
+}
+
+#opinionPage .content .opinionBox .unit .text
+{
+	position: relative;
+	margin: 20px 0 0 30px;
+	width: 75%;
+	font-size: 14px;
+}
+
+#opinionPage .content .opinionBox .unit .text .let
+{
+	position: relative;
+	font-family: TPR;
+	color: #e08b44;
+	margin-top: 10px;
+}
+
+#opinionPage .content .opinionBox .unit .text .let:first-child
+{
+	margin: 0;
+}
+
+#opinionPage .content .opinionBox .unit .text .let .val
+{
+	position: relative;
+	font-family: calibri;
+	font-weight: 100;
+	color: #fff;
+}
+
+#opinionPage .content .opinionBox .unit .text .let .val.o
+{
+	display: block;
+}
+
+#opinionPage .content .opinionBox .unit .want
+{
+	position: absolute;
+	width: 100px;
+	height: 25px;
+	font-size: 14px;
+	right: 30px;
+	bottom: 30px;
+	text-align: center;
+    padding-top: 2px;
+    box-sizing: border-box;
+}
+
+#opinionPage .content .opinionBox .unit .want .text
+{
+	text-align: center;
+	margin: 0;
+	width: auto;
+}
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+
+#contact
+{
+	position: relative;
+	margin-top: 200px;
+	margin-bottom: 200px;
+}
+
+#contact .content
+{
+	position: relative;
+	margin: auto;
+	max-width: 1000px;
+	color: #fff;
+}
+
+#contact .content .title
+{
+	position: relative;
+	text-align: center;
+	font-size: 24px;
+	font-family: TPR;
+}
+
+#contact .content .mapsBox
+{
+	position: relative;
+	width: 100%;
+	display: flex;
+	margin-top: 100px;
+}
+
+#contact .content .mapsBox .maps
+{
+	position: relative;
+	width: 70%;
+	min-height: 300px;
+	background: url(img/maps.jpg) no-repeat 100% center;
+}
+
+#contact .content .mapsBox .text
+{
+	position: relative;
+	margin: 30px 0 30px 30px;
+}
+
+#contact .content .mapsBox .text .unit
+{
+	position: relative;
+	font-size: 14px;
+	font-family: TPR;
+	color: #e08b44;
+	margin-bottom: 10px;
+}
+
+#contact .content .mapsBox .text .unit .val
+{
+	position: relative;
+	font-size: 14px;
+	font-family: calibri;
+	font-weight: 100;
+	color: #fff;
+}
+
+#contact .content .mapsBox .text .soc
+{
+	position: relative;
+	margin-top: 30px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+#contact .content .mapsBox .text .soc .unit
+{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+}
+
+#contact .content .mapsBox .text .soc .unit.inst
+{
+	background: url(img/soc.png) no-repeat;
+    background-size: 73px;
+    background-position: -2px -2px;
+}
+
+#contact .content .mapsBox .text .soc .unit.inst:hover
+{
+    background-position: -2px -35px;
+}
+
+#contact .content .mapsBox .text .soc .unit.vk
+{
+	background: url(img/soc.png) no-repeat;
+    background-size: 73px;
+    background-position: -41px -2px;
+}
+
+#contact .content .mapsBox .text .soc .unit.vk:hover
+{
+    background-position: -41px -35px;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+
+#aboutPage
+{
+	position: relative;
+	margin-top: 200px;
+}
+
+#aboutPage .content
+{
+	position: relative;
+	margin: auto;
+	max-width: 1000px;
+	color: #fff;
+}
+
+#aboutPage .content .flex
+{
+	position: relative;
+	margin-top: 100px;
+	display: flex;
+}
+
+#aboutPage .content .title
+{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	font-size: 24px;
+	font-family: TPR;
+}
+
+#aboutPage .content .leftBlock
+{
+	position: relative;
+	width: 48%;
+}
+
+#aboutPage .content .leftBlock .imagesBlock
+{
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 100%;
+}
+
+#aboutPage .content .leftBlock .image
+{
+	position: relative;
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+#aboutPage .content .leftBlock .image .textBlock
+{
+	position: absolute;
+	text-align: left;
+	width: 100%;
+	height: 80px;
+	left: 0;
+	bottom: 0;
+	background: rgba(0,0,0,0.5);
+	padding: 10px 30px 5px 30px;
+	box-sizing: border-box;
+}
+
+#aboutPage .content .leftBlock .image .textBlock .title
+{
+	font-size: 14px;
+	font-family: calibri;
+	font-weight: 100;
+	color: #e08b44;
+	text-align: left;
+}
+
+#aboutPage .content .leftBlock .image .textBlock .text
+{
+	font-size: 12px;
+	font-family: calibri;
+	font-weight: 100;
+	color: #fff;
+	text-align: left;
+}
+
+#aboutPage .content .leftBlock .image img
+{
+	width: 100%;
+}
+
+#aboutPage .content .leftBlock .images .unit
+{
+	position: relative;
+	margin-right: 10px;
+}
+
+#aboutPage .content .leftBlock .images .unit .shadow
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 70px;
+	background: rgba(224,139,68,0.8);
+	z-index: 2;
+	font-family: calibri;
+	font-size: 14px;
+	font-weight: 100;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 28px;
+	opacity: 0;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+#aboutPage .content .leftBlock .images .unit .shadow:hover
+{
+	opacity: 1;
+}
+
+
+#aboutPage .content .leftBlock .images .unit .text
+{
+	display: none;
+}
+
+#aboutPage .content .leftBlock .images img
+{
+	position: relative;
+	height: 70px;
+}
+
+#aboutPage .content .leftBlock .images
+{
+	position: relative;
+	width: calc(100% - 80px);
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	padding: 0 30px 0 30px;
+	box-sizing: border-box;
+}
+
+#aboutPage .content .leftBlock .imagesBlock .arrow
+{
+	position: relative;
+	top: 0;
+	right: 0;
+	height: 70px;
+	width: 30px;
+	margin-left: 10px;
+	background: #fff;
+	opacity: 0.5;
+	transition: 0.3s;
+	cursor: pointer;
+	z-index: 3;
+}
+
+#aboutPage .content .leftBlock .imagesBlock .arrow:before
+{
+	content: '';
+	position: absolute;
+	top: 25px;
+	left: 10px;
+	width: 10px;
+	height: 10px;
+	box-sizing: border-box;
+	border: 10px solid rgba(0,0,0,0);
+	border-left: 10px #000 solid;
+}
+
+#aboutPage .content .leftBlock .imagesBlock .arrow.left
+{
+	left: 0;
+	margin: 0;
+	margin-right: 10px;
+}
+
+#aboutPage .content .leftBlock .imagesBlock .arrow.left:before
+{
+	left: 0;
+	right: 10px;
+	border: 10px solid rgba(0,0,0,0);
+	border-right: 10px #000 solid;
+}
+
+#aboutPage .content .leftBlock .imagesBlock .arrow:hover
+{
+	background: #e08b44;
+	opacity: 1;
+}
+
+#aboutPage .content .rightBlock
+{
+	position: relative;
+	width: 48%;
+	margin: 20px 10px 0px 30px;
+}
+
+#aboutPage .content .rightBlock .title
+{
+	position: relative;
+	font-size: 14px;
+	color: #e08b44;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+#aboutPage .content .rightBlock .text
+{
+	position: relative;
+	font-size: 14px;
+	color: #fff;
+	font-family: calibri;
+	font-weight: 100;
+}
+
+#aboutPage .content .rightBlock .text .h3
+{
+	position: relative;
+	margin-top: 10px;
+	color: #e08b44;
+}
+
+#aboutPage .content .rightBlock .text .orange
+{
+	color: #e08b44;
+}
+
+#aboutPage .content .authorText
+{
+	position: relative;
+	margin-top: 30px;
+	text-align: center;
+	font-family: TPR;
+	font-size: 14px;
+	color: #e08b44;
+}
+
+#aboutPage .content .director
+{
+	position: relative;
+	margin-top: 15px;
+	text-align: center;
+	font-family: calibri;
+	font-weight: 100;
+	font-size: 14px;
+	color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
 
 #footer
 {
@@ -1791,7 +3672,7 @@ img {
   }
 
   /*-------------------------------------------------------------------------
-    # aboutPage
+    # About
   ---------------------------------------------------------------------------*/
 
   #aboutPage .content div.flex {

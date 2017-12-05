@@ -70,48 +70,6 @@ $(document).ready(function(){
 		}
 	});
 
-	//Расчет приблизительной стоимости и отправка формы
-
-
-	var calcForm = document.querySelector('.calc-form');
-	var selectTypeR = calcForm.querySelector('#type_r');
-	var selectType1 = calcForm.querySelector('#type_1');
-	var selectType2 = calcForm.querySelector('#type_2');
-	var dataTypeR = calcForm.querySelectorAll('.type_r');
-	var dataType1 = calcForm.querySelectorAll('.type_1');
-	var dataType2 = calcForm.querySelectorAll('.type_2');
-	var poleTypeR = calcForm.querySelector('#pole-type_r');
-	var poleType1 = calcForm.querySelector('#pole-type_1');
-	var poleType2 = calcForm.querySelector('#pole-type_2');
-	var polePrice = calcForm.querySelector('#pole-price');
-	var divPrice = calcForm.querySelector('#form-price');
-	var price = ['1000р', '2000р', '3000р', '4000р', '5000р'];
-	var z = dataTypeR.length
-
-			for (var i = 0; i < z; i++) {
-				console.log(dataTypeR[i]);
-				dataTypeR[i].addEventListener('click', function(evt) {
-					var self = evt.target;
-
-						var n = z;
-
-						while(n--) {
-
-							 if(dataTypeR[n] == self) {
-
-									var x = n;
-
-									break;
-
-							 }
-
-						}
-						poleTypeR.value = dataTypeR[x].innerHTML;
-						divPrice.innerText = price[1] + x;
-						console.log(poleTypeR.value);
-				});
-			}
-
 
 	//Анимация слайдера на главной
 	$('#project .content .sliderBox .contentBox .unit').each(function(){

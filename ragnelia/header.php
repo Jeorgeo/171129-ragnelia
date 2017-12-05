@@ -26,7 +26,7 @@
 			<div id="js-toggle" class="left-panel__menu-toggle">
 				<button class="header-menu-toggle"><span>menu</span></button>
 			</div>
-			<a class="logo-link" href="/"><div class="logo"><?php the_custom_logo(); ?></div></a>
+			<div class="logo"><?php the_custom_logo(); ?></div>
 			<a class="phone-link" href="tel:+74952013021">+7 (495) 201-30-21</a>
 			<div class="units left-panel">
 				<?php

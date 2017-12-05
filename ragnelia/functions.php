@@ -119,7 +119,15 @@ add_action( 'widgets_init', 'ragnelia_widgets_init' );
 function ragnelia_scripts() {
 	wp_enqueue_style( 'ragnelia-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'ragnelia-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'ragnelia-jquery', get_template_directory_uri() . '/js/jquery-3.2.0.min.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'ragnelia-image', get_template_directory_uri() . '/js/jqueryImage.min.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'ragnelia-menu', get_template_directory_uri() . '/js/menu.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'ragnelia-all-scripts', get_template_directory_uri() . '/js/allScript.js', array(), '20151215', true );
+
+		wp_enqueue_script( 'ragnelia-calc', get_template_directory_uri() . '/js/calc.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'ragnelia-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -150,9 +158,28 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
+ * Require TGM.
+ */
+require get_template_directory() . '/tgm/tgm-files.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Require portfolio.
+ */
+require get_template_directory() . '/inc/portfolio.php';
+
+/**
+ * Require reviews.
+ */
+require get_template_directory() . '/inc/reviews.php';
+
+/**
+ * Require services.
+ */
+require get_template_directory() . '/inc/services.php';

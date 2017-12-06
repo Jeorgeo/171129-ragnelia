@@ -1,7 +1,7 @@
 //Расчет приблизительной стоимости и отправка формы
 
 
-/*var calcForm = document.querySelector('.calc-form');
+var calcForm = document.querySelector('.calc-form');
 var selectTypeR = calcForm.querySelector('#type_r');
 var selectType1 = calcForm.querySelector('#type_1');
 var selectType2 = calcForm.querySelector('#type_2');
@@ -90,4 +90,4 @@ var typeСoefficient = [0, 0, 5, 10, 15, 0, 5, 10, 15, 0, 10, 20, 30, 0, 1690, 2
 
 
       });
-    }*/
+    }

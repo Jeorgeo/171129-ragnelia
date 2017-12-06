@@ -49,7 +49,7 @@
         					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">[Х]</span></button>
         					<h4 class="modal-title" id="myModalLabel">Быстрое оформление заявки</h4>
         				</div>
-                    <form class="form-horizontal" onsubmit="yaCounter44918776.reachGoal('MAKE_ORDER',function(){console.log('Данные успешно отправлены');}); return true;" id="form_order" method="post" action="/contacts" enctype="multipart/form-data">
+                    <form class="form-horizontal" id="form_order" method="post" enctype="multipart/form-data">
         				<div class="modal-body" id="modal">
         				<h4>Обязательные пункты</h4>
         				<div class="form-group">
@@ -101,8 +101,7 @@
 
               </div>
               <div class="modal-footer" id="modalF">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
-                <input name="submit" id="submit_order" class="btn btn-primary" value="Отправить заявку" type="submit">
+                <button type="submit" id="submit_order" class="btn btn-primary button"><span class="text">Отправить заявку</span></button>
               </div>
               </form>
                </div>
@@ -229,7 +228,7 @@
         				<div class="col-md-6 col-xs-6">
         					<div class="cont" style="display: none;"><!--12-->
         						<input id="lamir" type="checkbox">
-        						Ламинирование
+        						<label for="lamir">Ламинирование</label>
         					</div>
         					<div class="cont" style="display: none;"> Люверсы:<!--13-->
         						<select id="luvers">
@@ -240,19 +239,19 @@
         					</div>
         					<div class="cont" style="display: none;"><!--14-->
         						<input id="podram" type="checkbox">
-        						Подрамник
+        						<label for="podram">Подрамник</label>
         					</div>
         					<div class="cont" style="display: none;"><!--15-->
         						<input id="gall" type="checkbox">
-        						Галерейная натяжка
+        						<label for="gall">Галерейная натяжка</label>
         					</div>
         					<div class="cont" style="display: none;"><!--16-->
         						<input id="power" type="checkbox">
-        						Усиление края
+        						<label for="power">Усиление края</label>
         					</div>
         					<div class="cont" style="display: none;"><!--17-->
         						<input id="krug" type="checkbox">
-        						Скругление
+        						<label for="krug">Скругление</label>
         					</div>
         					<div class="cont" style="display: none;"> Фальц:<!--18-->
         						<select id="falc">
@@ -275,16 +274,15 @@
         								<span class="trg" id="bort" value="rgb(224, 182, 68)" style="margin-left: 11px; background-color: rgb(255, 0, 0); color: rgb(221, 221, 221);">&nbsp;</span></div>
         						</div>
         					</div>
-        					<div class="cont" style="display: block;"><!--20-->
+        					<div class="cont cont_label" style="display: block;"><!--20-->
         						<input id="block" type="checkbox">
-        						Блок питания
+        						<label class="calc-form" for="block">Блок питания</label>
         					</div>
-        					<div class="cont" style="display: block;"><!--21-->
+        					<div class="cont cont_label" style="display: block;"><!--21-->
         						<input id="contr" type="checkbox">
-        						Контражур
-        						<br>
+        						<label class="calc-form" for="contr">Контражур</label>
         						<input id="pdlj" type="checkbox">
-        						Подложка
+        						<label class="calc-form" for="pdlj">Подложка</label>
         					</div>
         					<div id="podlojka" class="cont" style="display: none;"><!--22-->
         						<div class="ct">Высота подложки, см:
@@ -295,20 +293,9 @@
         						</div>
         						<div style="margin-top: 3px;"><span>Цвет подложки</span><span class="trg" id="podl" value="rgb(0, 0, 0)" style="margin-left: 10px; background-color: rgb(0, 0, 0); color: rgb(221, 221, 221);">&nbsp;</span></div>
         					</div>
-        					<div class="cont" style="display: none;"><!--23-->
-        						<input id="design" type="checkbox">
-        						Дизайн
-        					</div>
-        					<div class="cont" style="display: block;"><!--25 (24)-->
+        					<div class="cont" style="display: block;"><!--23-->
         						<input id="montaj" type="checkbox">
         						Монтаж
-        					</div>
-        					<div class="cont" style="display: block;"><!--24 (25)-->
-        						<input id="oneday" type="checkbox">
-        						ЗА 1 ДЕНЬ!
-        					</div>
-        					<div class="cont" id="kvota" style="display: none;"><!--26-->
-        						<div>Квота только одна!</div>
         					</div>
         				</div>
         			</div>
@@ -317,7 +304,7 @@
         			</div>
         			<div id="kolvo">Стоимость: <span id="itog">60</span> руб.</div>
         			<div class="text-center">
-        				<button type="button" class="btn btn-success" data-toggle="modal" data-target="#order">Оставить заявку</button>
+        				<button type="button" class="button btn btn-success" data-toggle="modal" data-target="#order"><span class="text">Оставить заявку</span></button>
         			</div>
         		</div>
         	</div>
@@ -348,3 +335,7 @@
 	</div>
 </div>
 </div>
+
+<!--<script src="<?php bloginfo('template_url'); ?>/js/libs.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/common.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/jqColorPicker.js"></script>!-->

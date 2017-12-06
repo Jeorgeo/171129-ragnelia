@@ -7,7 +7,7 @@ $(document).ready(function(){
 	});
 
 	// появление стрелочки
-	$('#mainBanner').imagesLoaded({ background: true }, function(){
+	/*$('#mainBanner').imagesLoaded({ background: true }, function(){
 		$('.arrowBlock .arrow').addClass('active');
 	});
 
@@ -16,7 +16,7 @@ $(document).ready(function(){
         {
         	$('.arrowBlock .arrow').addClass('none');
         }
-    });
+    });*/
 
 	$('.calcBlock .input:not(.noArrow)').click(function(e){
 		countUnit = $(this).find('.unit').length;

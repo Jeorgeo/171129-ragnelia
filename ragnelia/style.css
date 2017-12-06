@@ -2387,7 +2387,7 @@ img {
 #portfoliosPage
 {
 	position: relative;
-	margin-top: 200px;
+	margin-top: 2em;
 }
 
 #portfoliosPage .content
@@ -2533,18 +2533,15 @@ img {
     cursor: pointer;
 }
 
-#portfoliosPage .portfolioBox .imagesBox .image .shadow:hover
-{
+#portfoliosPage .portfolioBox .imagesBox .image .shadow:hover {
     opacity: 1;
 }
 
-#portfoliosPage .portfolioBox .text
-{
+#portfoliosPage .portfolioBox .text {
 	position: relative;
 	width: 400px;
 	margin-top: 50px;
-    padding-right: 30px;
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #portfoliosPage .portfolioBox .text .name
@@ -3609,6 +3606,22 @@ input[type=checkbox]:checked + label.cloud-form__сonsent::before {
     margin: auto;
 	}
 
+#portfoliosPage .portfolioBox {
+	flex-direction: column;
+}
+
+#portfoliosPage .portfolioBox .imagesBox {
+	width: 95%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+
+#portfoliosPage .portfolioBox .text {
+	width: 95%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+
   .arrowBlock,
   #footer .content .units .menu {
     display: none;
@@ -4001,6 +4014,8 @@ input[type=checkbox]:checked + label.cloud-form__сonsent::before {
 }
 
 #calc-contener {
+	width: 100%;
+	max-width: 480px;
 	margin: 10px 0;
 	background-color: #000000;
 	color: #ffffff;
@@ -4026,17 +4041,15 @@ input[type=checkbox]:checked + label.cloud-form__сonsent::before {
 	background: url(/img/loader.gif) no-repeat center top;
 }
 
-#calc-contener #calc-form input, #calc-contener #calc-form select, #calc-contener #calc-form textarea {
+#calc-contener #calc-form input,
+#calc-contener #calc-form select,
+#calc-contener #calc-form textarea {
 	display: block;
 	width: 100%;
 	margin: 0.5em auto;
 	background: #000000;
 	border: 1px solid #e08b44;
 	color: #ffffff;
-}
-
-#calc-contener #offer {
-
 }
 
 #calc-contener #calc-form div.cont,
@@ -4150,6 +4163,56 @@ input[type=checkbox]:checked + label.cloud-form__сonsent::before {
 
 #calc-dop .pl:hover .show-top {
 	margin-top: 0;
+}
+
+#proba div {
+	display: inline-block;
+	width: 45%;
+	vertical-align: top;
+}
+
+#calc-contener #calc-form .cont #block,
+#calc-contener #calc-form .cont #contr,
+#calc-contener #calc-form .cont #pdlj {
+	display: none;
+}
+
+#calc-contener #calc-form .ct input,
+#calc-contener #calc-form .ct input {
+	display: inline-block;
+	width: 32px;
+}
+
+#calc-form .cont label {
+	position: relative;
+	display: block;
+	width: 100%;
+	vertical-align: top;
+	margin: 0.5em;
+	padding-left: 35px;
+	box-sizing: border-box;
+}
+
+#calc-form button.button {
+	width: 100%;
+	margin: 0.3em auto;
+	padding: 0.5em;
+	color: #ffffff;
+
+}
+
+input[type=checkbox] + label.calc-form:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #e08b44;
+  content: '';
+}
+
+input[type=checkbox]:checked + label.calc-form:before {
+  background-color: #e08b44;
 }
 
 #view {
@@ -4353,6 +4416,62 @@ input[type=checkbox]:checked + label.cloud-form__сonsent::before {
 
 .whi .two {
 	color: #2b2a29;
+}
+
+.modal-dialog {
+	position: fixed;
+	z-index: 9999999;
+	top: 50px;
+	left: 0;
+	right: 0;
+	width: 320px;
+	height: 480px;
+	margin: auto;
+	padding: 0.5em;
+	border: 1px solid #e08b44;
+	background-color: #000000;
+	box-sizing: border-box;
+	box-shadow: 0 0 5px 2px #e08b44;
+	overflow: scroll;
+}
+
+button.close {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	background-color: transparent;
+	border: none;
+	color: gold;
+}
+
+button.close:hover {
+	color: #e08b44;
+	cursor: pointer;
+}
+
+#form_order input,
+#form_order label,
+#form_order textarea {
+	display: block;
+	width: 90%;
+	margin: 0.5em auto;
+	padding: 0.5em;
+	background: #000000;
+}
+
+#form_order input,
+#form_order textarea {
+	border: 1px solid #e08b44;
+}
+
+#form_order #submit_order {
+	display: block;
+	width: 97%;
+	margin: auto;
+	padding: 0.5em;
+	font-size: 1.2em;
+	text-align: center;
+	box-sizing: border-box;
 }
 
 

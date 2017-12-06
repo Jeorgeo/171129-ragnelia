@@ -16,7 +16,6 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 
@@ -27,7 +26,8 @@
 				<button class="header-menu-toggle"><span>menu</span></button>
 			</div>
 			<div class="logo"><?php the_custom_logo(); ?></div>
-			<a class="phone-link" href="tel:+74952013021">+7 (495) 201-30-21</a>
+			<?php dynamic_sidebar( 'phone-mobile' ); ?>
+
 			<div class="units left-panel">
 				<?php
 					wp_nav_menu( array(
@@ -36,8 +36,9 @@
 					) );
 				?>
 				<div class="callback">
-					<div class="phone"><a href="tel:+74952013021">+7 (495) 201-30-21</a></div>
-					<div class="email">info@рагнелия.рф</div>
+					<?php dynamic_sidebar( 'phone' ); ?>
+					<?php dynamic_sidebar( 'mail' ); ?>
+
 				</div>
 			</div>
 		</div>

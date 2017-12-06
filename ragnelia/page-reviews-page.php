@@ -65,7 +65,7 @@ $news = get_posts(
 						</span>
 					</div>
 				</div>
-				<div class="button want"><span class="text">Хочу так же!</span></div>
+				<div class="button want cloud-link"><span class="text">Хочу так же!</span></div>
 			</div>
 			<?php
 				}

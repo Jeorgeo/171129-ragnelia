@@ -52,7 +52,7 @@ $news = get_posts(
 							<div class="property"><?php echo get_field('agreement',$obj->ID); ?></div>
 						</div>
 					</div>
-					<div class="img"><img src="<?php echo get_field('image',$obj->ID); ?>"></div>
+					<div class="img"><img src="<?php echo get_field('image_s',$obj->ID); ?>"></div>
 				</div></a>
 			<?php
 				}

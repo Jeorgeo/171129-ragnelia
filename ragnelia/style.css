@@ -581,6 +581,10 @@ img {
 	transition: 0.3s;
 }
 
+a.button {
+	text-decoration: none;
+}
+
 .button .text
 {
 	position: relative;
@@ -765,15 +769,18 @@ img {
 #about .content .rightBlock .unit
 {
 	position: relative;
+	width: 200px;
+	height: 200px;
 	margin: 10px;
 	cursor: pointer;
+	overflow: hidden;
 }
 
 #about .content .rightBlock .unit .textBlock
 {
 	position: absolute;
 	width: 100%;
-	height: calc(100% - 4px);
+	height: 100%;
 	background: rgba(224,139,68,0.8);
 	padding: 20px;
 	box-sizing: border-box;
@@ -1521,6 +1528,11 @@ img {
 	width: 600px;
 	margin: auto;
 	margin-top: 30px;
+}
+
+#callBackBlock .quest {
+	width: 90%;
+	margin: auto;
 }
 
 #callBackBlock .content .formBlock textarea
@@ -2498,7 +2510,7 @@ img {
 	position: relative;
 	text-align: center;
 	width: calc(33% - 20px);
-	height: 120px;
+	height: 170px;
 	margin: 15px 20px 0px 0px;
 	overflow: hidden;
 }
@@ -2515,7 +2527,7 @@ img {
     top: 0px;
     left: 0px;
     width: 100%;
-    height: 120px;
+    height: 170px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2646,9 +2658,15 @@ img {
 	margin: auto;
 	top: 0;
 	bottom: 0;
-	right: 0;
-	left: 0;
 	transition: 0.3s;
+}
+
+#portfoliosPage .allPortBox .arrow.arrow.right:before {
+	left: 0;
+}
+
+#portfoliosPage .allPortBox .arrow.arrow.left:before {
+	right: 0;
 }
 
 #portfoliosPage .allPortBox .arrow:hover
@@ -2669,7 +2687,7 @@ img {
 #portfoliosPage .allPortBox .allPort
 {
 	position: relative;
-	width: auto;
+	width: 100%;
 	display: flex;
 	justify-content: flex-start;
 	overflow: hidden;
@@ -2678,6 +2696,7 @@ img {
 #portfoliosPage .allPortBox .allPort .unit
 {
 	position: relative;
+	width: 150px;
 	height: 150px;
 	display: flex;
 	justify-content: center;
@@ -3759,7 +3778,10 @@ input[type=checkbox]:checked + label.cloud-form__сonsent::before {
 
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 767px) {
+	#follow-box .follow_button {
+		display: none;
+	}
 
   #clients {
     padding-bottom: 20px;
@@ -3784,6 +3806,12 @@ input[type=checkbox]:checked + label.cloud-form__сonsent::before {
     background: url('images/icon_photo.png') no-repeat 50% 50%;
     background-size: contain;
   }
+
+	.phone-link a {
+		display: block;
+		width: 36px;
+		height: 36px
+	}
 
 	  #mainBanner .content {
   	padding: 0 1em;
@@ -3894,6 +3922,14 @@ input[type=checkbox]:checked + label.cloud-form__сonsent::before {
     display: block;
     margin: auto;
   }
+
+	#portfoliosPage .portfolioBox .imagesBox .image	{
+		height: 100px;
+	}
+
+	#portfoliosPage .portfolioBox .imagesBox .image .shadow	{
+	    height: 100px;
+	}
 
   /*-------------------------------------------------------------------------
     # Opinion
@@ -4050,6 +4086,17 @@ input[type=checkbox]:checked + label.cloud-form__сonsent::before {
 	background: #000000;
 	border: 1px solid #e08b44;
 	color: #ffffff;
+}
+
+#calc-contener #calc-form input#lett_h {
+	display: inline-block;
+	vertical-align: top;
+	width: 48px;
+}
+
+#calc-contener #calc-form select#font {
+	float: right;
+	width: 70%;
 }
 
 #calc-contener #calc-form div.cont,
@@ -4473,6 +4520,46 @@ button.close:hover {
 	text-align: center;
 	box-sizing: border-box;
 }
+
+
+.allPortBox .slick-dotted.slick-slider {
+    margin-bottom: 0;
+}
+
+.follow_button {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+  font-size: 0;
+}
+
+.follow_button::after,
+.follow_button::before {
+  position: absolute;
+  top: 10px;
+  display: block;
+  width: 15px;
+  height: 3px;
+  content: '';
+  background-color: #ffffff;
+}
+
+.follow_button::after {
+  left: 3px;
+  transform: rotate(45deg);
+}
+
+.follow_button::before {
+  right: 3px;
+  transform: rotate(-45deg);
+}
+
+.follow_button:hover {
+  opacity: 0.8;
+}
+
 
 
 /*mainCOLOR   #e08b44   */

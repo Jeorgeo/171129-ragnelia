@@ -37,8 +37,8 @@
 				) );
 			?>
 			<div class="callback">
-				<div class="phone"><a href="tel:+74952013021">+7 (495) 201-30-21</a></div>
-				<div class="email">info@рагнелия.рф</div>
+				<?php dynamic_sidebar( 'phone' ); ?>
+				<?php dynamic_sidebar( 'mail' ); ?>
 			</div>
 		</div>
 	</div>
@@ -97,6 +97,5 @@
 </div>
 
 <?php wp_footer(); ?>
-
 </body>
 </html>

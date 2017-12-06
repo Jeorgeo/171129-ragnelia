@@ -63,7 +63,6 @@ $news_r = get_posts(
 		)
 );?>
 
-
 <div id="mainBanner">
 	<div class="content">
 		<div class="title">Изготовление наружной рекламы<br>в Москве и Области от 49р/см</div>
@@ -71,15 +70,12 @@ $news_r = get_posts(
 			<div class="text">Проект, изготовление, согласование и монтаж наружной<br>рекламы за 5 дней в Москве и Московской области по цене от 49р/см</div>
 			<div class="button callback cloud-link"><span class="text">Заказать звонок</span></div>
 		</div>
-		<div class="arrowBlock">
-			<div class="arrow">
-				<div class="a1"></div>
-				<div class="a2"></div>
-				<div class="a3"></div>
-			</div>
+		<div id="follow-box">
+			<a class="follow_button" href="#next">Вниз</a>
 		</div>
 	</div>
 </div>
+<span id="next"></span>
 <div id="about">
 	<div class="content">
 		<div class="leftBlock">
@@ -102,7 +98,7 @@ $news_r = get_posts(
  							<div class="property"><?php echo get_field('installation',$obj->ID); ?></div>
  							<div class="property"><?php echo get_field('agreement',$obj->ID); ?></div>
  					</div>
- 					<div class="img"><img src="<?php echo get_field('image',$obj->ID); ?>"></div>
+ 					<div class="img"><img src="<?php echo get_field('image_s',$obj->ID); ?>"></div>
  				</div></a>
  			<?php
  				}
@@ -338,7 +334,10 @@ $news_r = get_posts(
 				}
 			 ?>
 		</div>
-		<div class="button opinionGo"><span class="text">В раздел "Отзывы"</span></div>
+		<a class="button opinionGo" href="<?php echo get_field( 'link_r' ); ?>">
+			<span class="text">В раздел "Отзывы"</span>
+		</a>
+
 	</div>
 </div>
 

@@ -110,6 +110,33 @@ function ragnelia_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Контакты - телефон(мобильная версия)', 'ragnelia' ),
+		'id'            => 'phone-mobile',
+		'description'   => esc_html__( 'Add widgets here.', 'ragnelia' ),
+		'before_widget' => '<div class="phone-link">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Контакты - телефон', 'ragnelia' ),
+		'id'            => 'phone',
+		'description'   => esc_html__( 'Add widgets here.', 'ragnelia' ),
+		'before_widget' => '<div class="phone">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Контакты - почта', 'ragnelia' ),
+		'id'            => 'mail',
+		'description'   => esc_html__( 'Add widgets here.', 'ragnelia' ),
+		'before_widget' => '<div class="email">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'ragnelia_widgets_init' );
 
@@ -118,6 +145,10 @@ add_action( 'widgets_init', 'ragnelia_widgets_init' );
  */
 function ragnelia_scripts() {
 	wp_enqueue_style( 'ragnelia-style', get_stylesheet_uri() );
+
+	wp_enqueue_style( 'ragnelia-style-slick', get_template_directory_uri() . '/slick/slick.css' );
+
+	wp_enqueue_style( 'ragnelia-style-slick-theme', get_template_directory_uri() . '/slick/slick-theme.css' );
 
 	wp_enqueue_script( 'ragnelia-jquery', get_template_directory_uri() . '/js/jquery-3.2.0.min.js', array(), '20151215', true );
 
@@ -134,6 +165,8 @@ function ragnelia_scripts() {
 	wp_enqueue_script( 'ragnelia-colorpicker', get_template_directory_uri() . '/js/jqColorPicker.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'ragnelia-all-scripts', get_template_directory_uri() . '/js/allScript.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'ragnelia-slick', get_template_directory_uri() . '/slick/slick.min.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'ragnelia-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

@@ -545,13 +545,14 @@ img {
 	color: #fff;
 }
 
-#mainBanner .content .title
-{
+#mainBanner .content .title {
 	position: relative;
 	margin-top: -20px;
+	padding: 1em;
 	font-size: 40px;
 	font-family: TPR;
 	text-align: center;
+	background: rgba(0, 0, 0, 0.45);
 }
 
 #mainBanner .content .panelButton

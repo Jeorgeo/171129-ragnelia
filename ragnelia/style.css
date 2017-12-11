@@ -516,12 +516,11 @@ img {
   color: #e08b44;
 }
 
-#mainBanner
-{
+#mainBanner {
 	position: relative;
 	width: 100%;
 	height: 1000px;
-	margin-top: 40px;
+	margin-top: 80px;
 	background: url('img/fon2.jpg') no-repeat;
 	background-size: cover;
 	background-position: top;
@@ -547,7 +546,7 @@ img {
 
 #mainBanner .content .title {
 	position: relative;
-	margin-top: -20px;
+	margin-top: -80px;
 	padding: 1em;
 	font-size: 40px;
 	font-family: TPR;
@@ -3420,7 +3419,7 @@ a.button {
   bottom: 0;
 	z-index: 99999;
 	width: 300px;
-  height: 360px;
+  height: 450px;
   margin: 5px auto;
   padding: 1em;
   color: #e08b44;
@@ -3475,6 +3474,23 @@ a.button {
   animation-name: rotate-up1;
   animation-duration: 0.3s;
   transform: rotate(-180deg);
+}
+
+.form-title {
+	display: block;
+	width: 90%;
+	margin: 1em auto;
+}
+
+.form-title h5 {
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 1.1em;
+	color: #ffffff;
+}
+
+.form-title p {
+	font-size: 0.9em;
 }
 
 .cloud-form input,
@@ -3626,21 +3642,29 @@ input[type=checkbox]:checked + label.cloud-form__сonsent::before {
     margin: auto;
 	}
 
-#portfoliosPage .portfolioBox {
-	flex-direction: column;
-}
+	#portfoliosPage .portfolioBox {
+		flex-direction: column;
+	}
 
-#portfoliosPage .portfolioBox .imagesBox {
-	width: 95%;
-	margin-left: 2.5%;
-	margin-right: 2.5%;
-}
+	#portfoliosPage .portfolioBox .imagesBox {
+		width: 95%;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+	}
 
-#portfoliosPage .portfolioBox .text {
-	width: 95%;
-	margin-left: 2.5%;
-	margin-right: 2.5%;
-}
+	#portfoliosPage .portfolioBox .text {
+		width: 95%;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+	}
+
+	#mainBanner {
+		margin-top: 120px;
+	}
+
+	#mainBanner .content .title {
+		margin-top: 0;
+	}
 
   .arrowBlock,
   #footer .content .units .menu {

@@ -80,7 +80,7 @@ $news_r = get_posts(
 	<div class="content">
 		<div class="leftBlock">
 			<div class="title">Чем занимается наша компания?</div>
-			<div class="text">Мы - рекламно-производственная компания полного цикла</div>
+			<div class="text"><?php echo get_field( 'text_about' ); ?></div>
 		</div>
 		<div class="rightBlock">
 			<?php
@@ -89,7 +89,7 @@ $news_r = get_posts(
 							continue;
 					}
 			 ?>
-			 <a href="<?php echo $obj->post_name; ?>" target="_blank">
+			 <a href="<?php echo $obj->post_name; ?>">
  				<div class="unit">
  					<div class="textBlock">
  						<div class="title"><span><?php echo $obj->post_title; ?></span></div>

@@ -58,6 +58,14 @@
 		close
 	</div>
 	<div class="details-form">
+		<div class="form-title">
+			<h5>
+				Заполните поля и отправьте заявку
+			</h5>
+			<p>
+				Наш менеджер свяжеться с Вами в течении 5 минут.
+			</p>
+		</div>		
 		<form id="js_form" method="post" class="cloud-form reviews-form">
 			<!-- Hidden Required Fields -->
 			<input type="hidden" name="project_name" value="Dinelli.ru">
@@ -66,10 +74,9 @@
 			<!-- END Hidden Required Fields -->
 
 			<input id="phone" class="cloud-form__phone" type="text" name="phone"
-			value="" placeholder="+7(___) ___-__-__" required
-			pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$">
+			value="" placeholder="Укажите номер" required>
 			<input id="mail"  class="cloud-form__mail" type="text" name="mail"
-			value="" placeholder="iNfo@mail.ru" required
+			value="" placeholder="Укажите почту" required
 			pattern="^([A-Za-z0-9_\.\-]{1,20})@([a-z0-9\.\-]{1,20})\.([a-z]{2,4})">
 			<label  class="cloud-form__message" for="message">Ваше сообщение</label>
 			<textarea id="message" class="cloud-form__message" name="message"
@@ -77,7 +84,7 @@
 			<button id="submit" class="button cloud-form__submit" type="submit" name="submit">
 				<span class="text">Отправить</span>
 			</button>
-			<input id="сonsent-r" class="cloud-form__сonsent" type="checkbox" name="сonsent" value="" required>
+			<input id="сonsent-r" class="cloud-form__сonsent" type="checkbox" name="сonsent" value="" required checked>
 			<label class="cloud-form__сonsent" for="сonsent-r">
 				Согласие на обработку персональных данных
 			</label>

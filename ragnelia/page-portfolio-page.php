@@ -33,6 +33,7 @@ $news = get_posts(
 
 <div id="portfoliosPage">
 	<div class="content">
+		<?php if( function_exists('kama_breadcrumbs') ) kama_breadcrumbs(' \ '); ?>
 		<div class="title">Наше портфолио</div>
 		<div class="portBox">
 			<?php
@@ -41,7 +42,7 @@ $news = get_posts(
 							continue;
 					}
 			 ?>
-			<a href="<?php echo $obj->post_name; ?>" target="_blank">
+			<a href="<?php echo $obj->post_name; ?>">
 				<div class="unit">
 					<div class="name"><?php echo $obj->post_title; ?></div>
 					<img src="<?php echo get_field('image',$obj->ID); ?>" >

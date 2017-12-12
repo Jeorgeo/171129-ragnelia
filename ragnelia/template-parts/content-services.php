@@ -26,6 +26,7 @@
 
 <div id="portfoliosPage">
 	<div class="content">
+    <?php if( function_exists('kama_breadcrumbs') ) kama_breadcrumbs(' \ '); ?>
 		<div class="portfolioBox">
 			<div class="imagesBox">
 				<div class="mainImage"><img src="<?php echo get_field('image_s',$obj->ID); ?>"></div>

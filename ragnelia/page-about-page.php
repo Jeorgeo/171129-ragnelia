@@ -16,6 +16,7 @@ get_header(); ?>
 
 <div id="aboutPage">
 	<div class="content">
+		<?php if( function_exists('kama_breadcrumbs') ) kama_breadcrumbs(' \ '); ?>
 		<div class="title">Несколько слов про нашу компанию</div>
 		<div class="flex">
 			<div class="leftBlock">

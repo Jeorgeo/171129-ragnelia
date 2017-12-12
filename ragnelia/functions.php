@@ -222,3 +222,8 @@ require get_template_directory() . '/inc/reviews.php';
  * Require services.
  */
 require get_template_directory() . '/inc/services.php';
+
+/**
+ * Require breadcrumbs.
+ */
+require get_template_directory() . '/inc/breadcrumbs.php';

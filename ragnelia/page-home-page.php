@@ -284,6 +284,7 @@ $news_r = get_posts(
 		<div class="sliderBox">
 			<div class="contentBox">
 				<?php
+					$index = -1;
 					foreach ($news_p as $obj) {
 						if($obj->post_name == 'archive'){
 								continue;
@@ -300,6 +301,7 @@ $news_r = get_posts(
 					</div>
 
 				<?php
+					$index++;
 					}
 				 ?>
 
@@ -307,10 +309,17 @@ $news_r = get_posts(
 			<div class="doteds">
 				<div class="unit active">
 				</div>
-				<div class="unit">
-				</div>
-				<div class="unit">
-				</div>
+
+				<?php
+					for ($i=0; $i < $index; $i++) {
+						?>
+						<div class="unit">
+						</div>
+				<?php
+					}
+				 ?>
+
+
 			</div>
 			<div class="button port cloud-link"><span class="text">Хочу также!</span></div>
 		</div>

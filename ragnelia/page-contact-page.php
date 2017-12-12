@@ -16,6 +16,7 @@ get_header(); ?>
 
 <div id="contact">
 	<div class="content">
+		<?php if( function_exists('kama_breadcrumbs') ) kama_breadcrumbs(' \ '); ?>
 		<div class="title">Контактная информация</div>
 		<div class="mapsBox">
 			<div class="maps">

@@ -33,6 +33,7 @@ $news = get_posts(
 
 <div id="opinionPage">
 	<div class="content">
+		<?php if( function_exists('kama_breadcrumbs') ) kama_breadcrumbs(' \ '); ?>
 		<div class="title">Отзывы и благодарности от наших кдиентов</div>
 		<div class="opinionBox">
 			<?php

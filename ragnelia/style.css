@@ -516,6 +516,25 @@ img {
   color: #e08b44;
 }
 
+.breadcrumbs {
+	margin-left: 2em;
+}
+
+.breadcrumbs a {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+	color: #e08b44;
+	border-bottom: 1px solid #e08b44;
+}
+
+.breadcrumbs .current {
+	color: #e08b44;
+}
+
+
 #mainBanner {
 	position: relative;
 	width: 100%;
@@ -1561,7 +1580,7 @@ a.button {
 #callBackBlock .content .formBlock input
 {
 	position: relative;
-	width: 38%;
+	width: 37%;
 	height: 40px;
 	padding: 10px 15px 10px 15px;
 	box-sizing: border-box;
@@ -1584,7 +1603,7 @@ a.button {
 	position: relative;
 	box-sizing: border-box;
 	height: 40px;
-	width: calc(22% - 40px);
+	width: calc(24% - 40px);
 	font-size: 14px;
 	color: #fff;
 	border-color: #000;
@@ -2407,6 +2426,7 @@ a.button {
 	position: relative;
 	margin: auto;
 	max-width: 1000px;
+	margin-top: 90px;
 	color: #fff;
 }
 
@@ -2426,7 +2446,7 @@ a.button {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin-top: 80px;
+	margin-top: 2em;
 	padding: 10px;
 	box-sizing: border-box;
 }
@@ -2747,7 +2767,7 @@ a.button {
 #opinionPage
 {
 	position: relative;
-	margin-top: 200px;
+	margin-top: 100px;
 }
 
 #opinionPage .content
@@ -2762,6 +2782,7 @@ a.button {
 {
 	position: relative;
 	width: 100%;
+	margin-top: 1em;
 	text-align: center;
 	font-size: 24px;
 	font-family: TPR;
@@ -3836,6 +3857,10 @@ input[type=checkbox]:checked + label.cloud-form__сonsent::before {
 		display: block;
 		width: 36px;
 		height: 36px
+	}
+
+	.breadcrumbs {
+		margin: 1em;
 	}
 
 	  #mainBanner .content {

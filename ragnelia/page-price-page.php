@@ -33,6 +33,7 @@ $news = get_posts(
 
 <div id="price">
 	<div class="content">
+		<?php if( function_exists('kama_breadcrumbs') ) kama_breadcrumbs(' \ '); ?>
 		<div class="title">Услуги и цены</div>
 		<div class="pricesBox">
 			<?php
@@ -41,7 +42,7 @@ $news = get_posts(
 							continue;
 					}
 			 ?>
-			<a href="<?php echo $obj->post_name; ?>" target="_blank">
+			<a href="services/<?php echo $obj->post_name; ?>">
 				<div class="unit">
 					<div class="text">
 						<div class="title"><span><?php echo $obj->post_title; ?></span></div>

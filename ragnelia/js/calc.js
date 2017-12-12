@@ -6,7 +6,7 @@ var selectTypeR = calcForm.querySelector('#type_r');
 var selectType1 = calcForm.querySelector('#type_1');
 var selectType2 = calcForm.querySelector('#type_2');
 var selectQ = selectType2.querySelectorAll('.price-block');
-var quant = selectType2.querySelectorAll('.unit');
+var quant = selectType2.querySelectorAll('.quant');
 var dataTypeR = calcForm.querySelectorAll('.type_r');
 var dataType1 = calcForm.querySelectorAll('.type_1');
 var dataType2 = calcForm.querySelectorAll('.type_2');
@@ -24,7 +24,7 @@ var w = quant.length;
 
 
 var typePrice = [0, 69, 9000, 8, 1, 900, 199, 1, 9000, 3950];
-var typeСoefficient = [0, 0, 5, 10, 15, 0, 5, 10, 15, 0, 10, 20, 30, 0, 1690, 2450, 4300, 0, 5, 10, 15, 0, 5, 10, 15, 0, 15900, 39000, 49000, 0, 5, 10, 15, 0, 5, 10, 15];
+var typeСoefficient = [0, 0, 0, 0, 0, 1690, 2450, 4300, 0, 0, 0, 15900, 39000, 49000, 0, 0];
 
 
 

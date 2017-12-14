@@ -795,6 +795,10 @@ a.button {
 	overflow: hidden;
 }
 
+#about .content .rightBlock .unit .img {
+	width: 270px;
+}
+
 #about .content .rightBlock .unit .textBlock
 {
 	position: absolute;
@@ -965,7 +969,8 @@ a.button {
 
 #calc .content .calcBlock .inputs .input.noArrow
 {
-    cursor: text;
+	margin-bottom: 3em;
+  cursor: text;
 }
 
 #calc .content .calcBlock .inputs .input.noArrow:before
@@ -1022,6 +1027,25 @@ a.button {
 #calc .content .calcBlock .inputs .input input:focus
 {
 	outline: none;
+}
+
+#calc .content .sub-calc-btn {
+	position: relative;
+	width: 300px;
+	height: 35px;
+	font-size: 14px;
+	text-align: center;
+	vertical-align: top;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	box-sizing: border-box;
+}
+
+#calc .content label {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	margin: 0.7em;
 }
 
 #calc .content .calcBlock .itog
@@ -1300,18 +1324,17 @@ a.button {
 	color: #fff;
 }
 
-#project .content .title
-{
+#project .content .title {
 	position: relative;
+	padding: 0 0.5em;
 	font-size: 24px;
 	font-family: TPR;
 	text-align: center;
 }
 
-#project .content .sliderBox
-{
+#project .content .sliderBox {
 	position: relative;
-	margin-top: 100px;
+	margin-top: 2em;
 	width: 100%;
 	padding: 0 30px 0 30px;
 	box-sizing: border-box;
@@ -1334,6 +1357,7 @@ a.button {
 	width: 100%;
 	height: 440px;
 	display: flex;
+	flex-direction: row;
 }
 
 #project .content .sliderBox .contentBox .unit.move
@@ -1353,10 +1377,16 @@ a.button {
 	height: 100%;
 }
 
+#project .content .sliderBox .contentBox .unit .imageBlock {
+	width: 70%;
+}
+
 #project .content .sliderBox .contentBox .unit .textBlock
 {
+	width: 30%;
 	position: relative;
-	margin: 30px 0 30px 30px;
+	margin: 0;
+	margin-left: 2em;
 }
 
 #project .content .sliderBox .contentBox .unit .textBlock .t
@@ -1373,7 +1403,7 @@ a.button {
 	font-size: 18px;
 	font-family: calibri;
 	font-weight: 100;
-	color: #fff;
+	color: #ffffff;
 }
 
 #project .content .sliderBox .contentBox .unit .textBlock .des .val
@@ -1444,6 +1474,7 @@ a.button {
 	font-family: TPR;
 	color: #fff;
 	margin-top: 50px;
+	padding: 0 0.5em;
 }
 
 #opinion .content .opinionBox
@@ -2462,8 +2493,7 @@ a.button {
 	overflow: hidden;
 }
 
-#portfoliosPage .content .portBox .unit .name
-{
+#portfoliosPage .content .portBox .unit .name {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -2472,6 +2502,8 @@ a.button {
 	align-items: center;
 	width: 300px;
 	height: 300px;
+	padding: 0.5em;
+	box-sizing: border-box;
 	background: rgba(224,139,68,0.8);
 	color: #fff;
 	z-index: 3;
@@ -2490,7 +2522,9 @@ a.button {
 #portfoliosPage .content .portBox .unit img
 {
 	position: relative;
-	height: 100%;
+	max-width: none;
+	width: 445px;
+	right: 0;
 }
 
 #portfoliosPage .portfolioBox
@@ -2516,7 +2550,10 @@ a.button {
 #portfoliosPage .portfolioBox .imagesBox .mainImage
 {
 	position: relative;
+	right: 0;
 	width: 100%;
+	height: 450px;
+	overflow: hidden;
 }
 
 #portfoliosPage .portfolioBox .imagesBox .mainImage img
@@ -2538,7 +2575,8 @@ a.button {
 #portfoliosPage .portfolioBox .imagesBox .image img
 {
 	position: relative;
-	height: 100%;
+	max-width: 150%;
+
 }
 
 #portfoliosPage .portfolioBox .imagesBox .image .shadow
@@ -2627,81 +2665,11 @@ a.button {
 #portfoliosPage .allPortBox
 {
 	position: relative;
-	margin-top: 50px;
+	display: flex;
+  justify-content: center;
 	width: auto;
 	height: 150px;
-	display: flex;
-    justify-content: center;
-}
-
-#portfoliosPage .allPortBox .arrow
-{
-	position: relative;
-	width: 50px;
-	height: 100%;
-	transition: 0.3s;
-	cursor: pointer;
-}
-
-#portfoliosPage .allPortBox .arrow.left
-{
-	border-right: 2px solid #fff;
-	margin-right: 10px;
-}
-
-#portfoliosPage .allPortBox .arrow.left:before
-{
-	border: 10px solid rgba(0,0,0,0);
-	border-right: 10px solid #fff;
-}
-
-#portfoliosPage .allPortBox .arrow.right
-{
-	border-left: 2px solid #fff;
-	margin-left: 10px;
-}
-
-#portfoliosPage .allPortBox .arrow.right:before
-{
-	border: 10px solid rgba(0,0,0,0);
-	border-left: 10px solid #fff;
-}
-
-#portfoliosPage .allPortBox .arrow:before
-{
-	content: '';
-	position: absolute;
-	height: 20px;
-	width: 20px;
-	box-sizing: border-box;
-	overflow: hidden;
-	margin: auto;
-	top: 0;
-	bottom: 0;
-	transition: 0.3s;
-}
-
-#portfoliosPage .allPortBox .arrow.arrow.right:before {
-	left: 0;
-}
-
-#portfoliosPage .allPortBox .arrow.arrow.left:before {
-	right: 0;
-}
-
-#portfoliosPage .allPortBox .arrow:hover
-{
-	border-color: #e08b44;
-}
-
-#portfoliosPage .allPortBox .arrow.left:hover:before
-{
-	border-right: 10px solid #e08b44;
-}
-
-#portfoliosPage .allPortBox .arrow.right:hover:before
-{
-	border-left: 10px solid #e08b44;
+	margin-top: 50px;
 }
 
 #portfoliosPage .allPortBox .allPort
@@ -2711,6 +2679,7 @@ a.button {
 	display: flex;
 	justify-content: flex-start;
 	overflow: hidden;
+	padding: 0 2em;
 }
 
 #portfoliosPage .allPortBox .allPort .unit
@@ -3884,6 +3853,12 @@ input[type=checkbox]:checked + label.cloud-form__сonsent::before {
 		width: 100%;
 	}
 
+	#about .content .rightBlock a {
+		display: block;
+    width: 100%;
+		margin: 0.5em auto;
+	}
+
 	#about .content,
 	#clients .contentBlock .content {
 		flex-direction: column;
@@ -3928,13 +3903,21 @@ input[type=checkbox]:checked + label.cloud-form__сonsent::before {
     margin-bottom: 2em;
   }
 
+	#project .content .sliderBox .contentBox .unit .imageBlock,
+	#project .content .sliderBox .contentBox .unit .textBlock {
+		width: 100%;
+	}
+
+	#project .content .sliderBox .contentBox .unit .textBlock {
+		margin: 0 1em;
+	}
+
 	#project .content .sliderBox .contentBox {
-		height: 450px;
+		height: 350px;
 	}
 
 	#project .content .sliderBox .contentBox .unit {
 		height: auto;
-		display: block;
 	}
 
 	#project .content .sliderBox .contentBox .unit .img {
@@ -3947,6 +3930,7 @@ input[type=checkbox]:checked + label.cloud-form__сonsent::before {
 		position: relative;
 		display: block;
 		margin-top: 1em;
+		text-align: center;
 	}
 
 	#callBackBlock .content .formBlock {
@@ -4085,6 +4069,18 @@ input[type=checkbox]:checked + label.cloud-form__сonsent::before {
   #mainBanner .content .panelButton {
     bottom: 0;
   }
+
+	#project .content .sliderBox .contentBox .unit {
+	    display: block;
+	}
+
+	#project .content .sliderBox .contentBox {
+	    height: 520px;
+	}
+
+	#project .content .sliderBox .contentBox .unit .textBlock {
+		margin: 1em auto;
+	}
 }
 
 .price-block {
@@ -4570,7 +4566,6 @@ button.close:hover {
 	text-align: center;
 	box-sizing: border-box;
 }
-
 
 .allPortBox .slick-dotted.slick-slider {
     margin-bottom: 0;

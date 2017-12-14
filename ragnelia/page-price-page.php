@@ -42,7 +42,7 @@ $news = get_posts(
 							continue;
 					}
 			 ?>
-			<a href="services/<?php echo $obj->post_name; ?>">
+			<a href="<?php echo $obj->post_name; ?>">
 				<div class="unit">
 					<div class="text">
 						<div class="title"><span><?php echo $obj->post_title; ?></span></div>

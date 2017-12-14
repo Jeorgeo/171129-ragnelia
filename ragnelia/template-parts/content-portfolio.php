@@ -62,7 +62,7 @@
     							continue;
     					}
     			 ?>
-           <a href="<?php echo $obj->post_name; ?>">
+           <a href="portfolio/<?php echo $obj->post_name; ?>">
      				<div class="unit">
      					<div class="name"><?php echo $obj->post_title; ?></div>
      					<img src="<?php echo get_field('image',$obj->ID); ?>" >

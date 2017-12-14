@@ -4,9 +4,8 @@
 var calcForm = document.querySelector('.calc-form');
 var selectTypeR = calcForm.querySelector('#type_r');
 var selectType1 = calcForm.querySelector('#type_1');
-var selectType2 = calcForm.querySelector('#type_2');
-var selectQ = selectType2.querySelectorAll('.price-block');
-var quant = selectType2.querySelectorAll('.quant');
+var selectQ = calcForm.querySelectorAll('.price-block');
+var quant = calcForm.querySelectorAll('.unit');
 var dataTypeR = calcForm.querySelectorAll('.type_r');
 var dataType1 = calcForm.querySelectorAll('.type_1');
 var dataType2 = calcForm.querySelectorAll('.type_2');
@@ -15,7 +14,10 @@ var poleType1 = calcForm.querySelector('#pole-type_1');
 var poleType2 = calcForm.querySelector('#pole-type_2');
 var polePrice = calcForm.querySelector('#pole-price');
 var divPrice = calcForm.querySelector('#form-price');
+var label = calcForm.querySelector('.label-quant');
+var labelQuant = label.querySelector('span');
 var calcResultForm = calcForm.querySelector('#calc-result');
+var showResult = calcForm.querySelector('.sub-calc-btn');
 var x = 0;
 var z = dataTypeR.length;
 var y = selectQ.length;
@@ -23,13 +25,13 @@ var w = quant.length;
 
 
 
-var typePrice = [0, 69, 9000, 8, 1, 900, 199, 1, 9000, 3950];
-var typeСoefficient = [0, 0, 0, 0, 0, 1690, 2450, 4300, 0, 0, 0, 15900, 39000, 49000, 0, 0];
+var typePrice = [0, 69, 9000, 8, 1690, 900, 199, 9000, 3950];
+var typeСoefficient = ['м-м..', 'ВЫСОТА(см)','ОБЪЕМ(м3)', 'ТИРАЖ (шт)', 'КОЛИЧЕСТВО (шт)', 'РАЗМЕР(м2)', 'РАЗМЕР(м2)', 'РАЗМЕР(м2)', 'РАЗМЕР(м2)'];
 
 
 
     for (var i = 0; i < z; i++) {
-      console.log(w);
+
       dataTypeR[i].addEventListener('click', function(evt) {
         var self = evt.target;
 
@@ -40,6 +42,7 @@ var typeСoefficient = [0, 0, 0, 0, 0, 1690, 2450, 4300, 0, 0, 0, 15900, 39000, 
              if(dataTypeR[n] == self) {
 
                 x = n;
+                console.log(x);
 
                 break;
 
@@ -47,47 +50,24 @@ var typeСoefficient = [0, 0, 0, 0, 0, 1690, 2450, 4300, 0, 0, 0, 15900, 39000, 
 
           }
           poleTypeR.value = dataTypeR[x].innerHTML;
-          for (var i = 0; i < y; i++) {
-            selectQ[i].classList.remove('block_active');
-          };
-          selectQ[x].classList.add('block_active');
-          for (var i = 0; i < dataType1.length; i++) {
-            dataType1[i].classList.add('price-block');
-            dataType1[i].classList.remove('block_active');
-          };
-          selectQ[x].classList.add('block_active');
-
-          dataType1[x].classList.add('block_active');
+          labelQuant.innerText = typeСoefficient[x];
       });
     };
 
-    var x1 = 0;
+      showResult.addEventListener('click', function(evt) {
 
-    for (var i = 0; i < w; i++) {
-      quant[i].addEventListener('click', function(evt) {
-        var self = evt.target;
-
-          var m = w;
-
-          while(m--) {
-
-             if(quant[m] == self) {
-
-                index = m;
-
-                break;
-
-             }
-
-          }
+          console.log(x);
 
           calcResultForm.classList.remove('price-block');
 
-          price = typePrice[x] * typeСoefficient[index];
+          var inputQuant = calcForm.querySelector('#quant');
 
-          divPrice.innerText = price + ' р';
+          price = typePrice[x] * inputQuant.value;
 
-
+          if (isNaN(price)) {
+            divPrice.innerText = 'проверьте данные';
+          } else {
+            divPrice.innerText = price + ' р';
+          }         
 
       });
-    }

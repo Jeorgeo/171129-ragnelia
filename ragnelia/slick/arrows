@@ -1,0 +1,68 @@
+#portfoliosPage .allPortBox .arrow {
+	position: relative;
+	width: 50px;
+	height: 100%;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+#portfoliosPage .allPortBox .arrow.left
+{
+	border-right: 2px solid #fff;
+	margin-right: 10px;
+}
+
+#portfoliosPage .allPortBox .arrow.left:before
+{
+	border: 10px solid rgba(0,0,0,0);
+	border-right: 10px solid #fff;
+}
+
+#portfoliosPage .allPortBox .arrow.right
+{
+	border-left: 2px solid #fff;
+	margin-left: 10px;
+}
+
+#portfoliosPage .allPortBox .arrow.right:before
+{
+	border: 10px solid rgba(0,0,0,0);
+	border-left: 10px solid #fff;
+}
+
+#portfoliosPage .allPortBox .arrow:before
+{
+	content: '';
+	position: absolute;
+	height: 20px;
+	width: 20px;
+	box-sizing: border-box;
+	overflow: hidden;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	transition: 0.3s;
+}
+
+#portfoliosPage .allPortBox .arrow.arrow.right:before {
+	left: 0;
+}
+
+#portfoliosPage .allPortBox .arrow.arrow.left:before {
+	right: 0;
+}
+
+#portfoliosPage .allPortBox .arrow:hover
+{
+	border-color: #e08b44;
+}
+
+#portfoliosPage .allPortBox .arrow.left:hover:before
+{
+	border-right: 10px solid #e08b44;
+}
+
+#portfoliosPage .allPortBox .arrow.right:hover:before
+{
+	border-left: 10px solid #e08b44;
+}

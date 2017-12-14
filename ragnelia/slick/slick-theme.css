@@ -19,98 +19,69 @@
 .slick-prev,
 .slick-next
 {
-    font-size: 0;
-    line-height: 0;
-
-    position: absolute;
-    top: 50%;
-
-    display: block;
-
-    width: 20px;
-    height: 20px;
-    padding: 0;
-    -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-
-    cursor: pointer;
-
-    color: transparent;
-    border: none;
-    outline: none;
-    background: transparent;
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 30px;
+  height: 100%;
+  transition: 0.3s;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 0;
 }
 .slick-prev:hover,
-.slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus
+.slick-next:hover
 {
-    color: transparent;
-    outline: none;
-    background: transparent;
+    border-color: #e08b44;
 }
-.slick-prev:hover:before,
-.slick-prev:focus:before,
-.slick-next:hover:before,
-.slick-next:focus:before
-{
-    opacity: 1;
+.slick-prev:hover:before {
+  border-right: 10px solid #e08b44;
 }
-.slick-prev.slick-disabled:before,
-.slick-next.slick-disabled:before
-{
-    opacity: .25;
+
+.slick-next:hover:before {
+  border-left: 10px solid #e08b44;
 }
 
 .slick-prev:before,
 .slick-next:before
 {
-    font-family: 'slick';
-    font-size: 20px;
-    line-height: 1;
-
-    opacity: .75;
-    color: white;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  transition: 0.3s;
 }
 
 .slick-prev
 {
-    left: -25px;
-}
-[dir='rtl'] .slick-prev
-{
-    right: -25px;
-    left: auto;
+  left: 0;
+  border-right: 3px solid #fff;
+  margin-right: 10px;
 }
 .slick-prev:before
 {
-    content: '←';
-}
-[dir='rtl'] .slick-prev:before
-{
-    content: '→';
+  left: 7px;
+  border: 10px solid rgba(0,0,0,0);
+  border-right: 10px solid #fff;
 }
 
 .slick-next
 {
-    right: -25px;
-}
-[dir='rtl'] .slick-next
-{
-    right: auto;
-    left: -25px;
+  right: 0;
+  border-left: 3px solid #fff;
+  margin-left: 10px;
 }
 .slick-next:before
 {
-    content: '→';
-}
-[dir='rtl'] .slick-next:before
-{
-    content: '←';
+  left: 0;
+  border: 10px solid rgba(0,0,0,0);
+	border-left: 10px solid #fff;
 }
 
 /* Dots */

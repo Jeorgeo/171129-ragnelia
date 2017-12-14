@@ -123,99 +123,26 @@ $news_r = get_posts(
 							<div class="type_r unit active" name="test">Штендеры:</div>
 							<div class="type_r unit active" name="test">Информационные панели:</div>
 							<div class="type_r unit active" name="test">Интерьерная печать:</div>
-							<div class="type_r unit active" name="test">Сайты:</div>
 							<div class="type_r unit active" name="test">Световые панель-кронштейны:</div>
 							<div class="type_r unit active" name="test">Панель-кронштейны:</div>
-
 						</div>
 					</div>
 					<div class="input noArrow">
-						<input type="text" name="adres" placeholder="Адрес размещения">
+						<input id="quant" type="text" name="quant" placeholder="Укажите данные">
+						<label class="label-quant" for="quant">Например, <span>высота в мм:</span> </label>
 					</div>
-					<div class="input">
-						<div id="type_1" class="units">
-							<div class="type_1 unit select">Параметр №1</div>
-							<div class="type_1 unit active" name="test">ВЫСОТА(см)</div>
-							<div class="type_1 unit active" name="test">объем(м3)</div>
-							<div class="type_1 unit active" name="test">ТИРАЖ (количество)</div>
-							<div class="type_1 unit active" name="test">РАЗМЕР</div>
-							<div class="type_1 unit active" name="test">РАЗМЕР(квадратный метр)</div>
-							<div class="type_1 unit active" name="test">РАЗМЕР(квадратный метр)</div>
-							<div class="type_1 unit active" name="test">ТИП САЙТА</div>
-							<div class="type_1 unit active" name="test">РАЗМЕР (квадратный метр)</div>
-							<div class="type_1 unit active" name="test">РАЗМЕР (квадратный метр)</div>
-						</div>
-					</div>
-					<div class="input">
-						<div id="type_2" class="units">
-							<div class="price-block block_active">
-								<div class="type_2 unit select">Параметр №2</div>
-							</div>
-							<div class="price-block">
-								<div class="type_2 unit select">Параметр №2</div>
-								<div class="type_2 unit active" name="test">5</div>
-								<div class="type_2 unit active" name="test2">10</div>
-								<div class="type_2 unit active" name="test2">15</div>
-							</div>
-							<div class="price-block">
-								<div class="type_2 unit select">Параметр №2</div>
-								<div class="type_2 unit active" name="test">5</div>
-								<div class="type_2 unit active" name="test2">10</div>
-								<div class="type_2 unit active" name="test2">15</div>
-							</div>
-							<div class="price-block">
-								<div class="type_2 unit select">Параметр №2</div>
-								<div class="type_2 unit active" name="test">10</div>
-								<div class="type_2 unit active" name="test2">20</div>
-								<div class="type_2 unit active" name="test2">30</div>
-							</div>
-							<div class="price-block">
-								<div class="type_2 unit select">Параметр №2</div>
-								<div class="type_2 unit active" name="test">малый</div>
-								<div class="type_2 unit active" name="test2">средний</div>
-								<div class="type_2 unit active" name="test2">большой</div>
-							</div>
-							<div class="price-block">
-								<div class="type_2 unit select">Параметр №2</div>
-								<div class="type_2 unit active" name="test">5</div>
-								<div class="type_2 unit active" name="test2">10</div>
-								<div class="type_2 unit active" name="test2">15</div>
-							</div>
-							<div class="price-block">
-								<div class="type_2 unit select">Параметр №2</div>
-								<div class="type_2 unit active" name="test">5</div>
-								<div class="type_2 unit active" name="test2">10</div>
-								<div class="type_2 unit active" name="test2">15</div>
-							</div>
-							<div class="price-block">
-								<div class="type_2 unit select">Параметр №2</div>
-								<div class="type_2 unit active" name="test">Landing-page</div>
-								<div class="type_2 unit active" name="test2">Корпоративный</div>
-								<div class="type_2 unit active" name="test2">Магазин</div>
-							</div>
-							<div class="price-block">
-								<div class="type_2 unit select">Параметр №2</div>
-								<div class="type_2 unit active" name="test">5</div>
-								<div class="type_2 unit active" name="test2">10</div>
-								<div class="type_2 unit active" name="test2">15</div>
-							</div>
-							<div class="price-block">
-								<div class="type_2 unit select">Параметр №2</div>
-								<div class="type_2 unit active" name="test">5</div>
-								<div class="type_2 unit active" name="test2">10</div>
-								<div class="type_2 unit active" name="test2">15</div>
-							</div>
-
-						</div>
-					</div>
+					<button class="sub-calc-btn button"type="button" name="button">
+						<span class="text">рассчитать</span>
+					</button>
 				</div>
 				<div id="calc-result" class="price-block" method="post">
 					<div class="itog">
-						Ориентировочная стоимость: <span id="form-price" class="count">1000р.</span>
+						Ориентировочная стоимость: <span id="form-price" class="count">0 р.</span>
 					</div>
 					<div class="h3">Для более точного расчета цены и сроков - оставьте заявку</div>
 					<div class="boxInputs">
-						<input type="text" class="phone" name="phone" placeholder="Контактный телефон*"><div class="button submit"><span class="text">Отправить заявку</span></div>
+						<input type="text" class="phone" name="phone" placeholder="Контактный телефон*">
+						<button type="submit" class="button submit"><span class="text">Отправить заявку</span></button>
 					</div>
 					<div class="dopText">Нажимая кнопку, вы соглашаетесь на<br><span class="persOpen">обработку персональных данных.</span></div>
 				</div>
@@ -292,7 +219,9 @@ $news_r = get_posts(
 				 ?>
 
 					<div class="unit">
-						<img src="<?php echo get_field('image',$obj->ID); ?>" >
+						<div class="imageBlock">
+							<img src="<?php echo get_field('image',$obj->ID); ?>" >
+						</div>
 						<div class="textBlock">
 							<div class="name t">Название проекта: <span class="val"><?php echo get_field('title_p',$obj->ID); ?></span></div>
 							<div class="adres t">Адрес проекта: <span class="val"><?php echo get_field('adress_p',$obj->ID); ?></span></div>

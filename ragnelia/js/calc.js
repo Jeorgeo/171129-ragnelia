@@ -10,7 +10,6 @@ var dataTypeR = calcForm.querySelectorAll('.type_r');
 var dataType1 = calcForm.querySelectorAll('.type_1');
 var dataType2 = calcForm.querySelectorAll('.type_2');
 var poleTypeR = calcForm.querySelector('#pole-type_r');
-var poleType1 = calcForm.querySelector('#pole-type_1');
 var poleType2 = calcForm.querySelector('#pole-type_2');
 var polePrice = calcForm.querySelector('#pole-price');
 var divPrice = calcForm.querySelector('#form-price');
@@ -18,6 +17,7 @@ var label = calcForm.querySelector('.label-quant');
 var labelQuant = label.querySelector('span');
 var calcResultForm = calcForm.querySelector('#calc-result');
 var showResult = calcForm.querySelector('.sub-calc-btn');
+var sendResult = calcForm.querySelector('.submit');
 var x = 0;
 var z = dataTypeR.length;
 var y = selectQ.length;
@@ -56,7 +56,7 @@ var typeСoefficient = ['м-м..', 'ВЫСОТА(см)','ОБЪЕМ(м3)', 'ТИ
 
       showResult.addEventListener('click', function(evt) {
 
-          console.log(x);
+          //evt.preventDefault();
 
           calcResultForm.classList.remove('price-block');
 
@@ -68,6 +68,10 @@ var typeСoefficient = ['м-м..', 'ВЫСОТА(см)','ОБЪЕМ(м3)', 'ТИ
             divPrice.innerText = 'проверьте данные';
           } else {
             divPrice.innerText = price + ' р';
-          }         
+          };
+
+          poleType2.value = labelQuant.innerText + inputQuant.value;
+
+          polePrice.value = divPrice.innerText;
 
       });

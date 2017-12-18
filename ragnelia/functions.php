@@ -137,6 +137,15 @@ function ragnelia_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Контакты - почта для форм', 'ragnelia' ),
+		'id'            => 'admin_mail',
+		'description'   => esc_html__( 'Add widgets here.', 'ragnelia' ),
+		'before_widget' => '<div class="email">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'ragnelia_widgets_init' );
 

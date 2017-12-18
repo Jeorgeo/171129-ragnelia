@@ -16,7 +16,13 @@
 		<div class="title">Остались вопросы? Хотите сделать заказ?</div>
 		<div class="h2">звоните нам в офис: +7 (495) 201-30-21<br>или<br>заполните поля и мы свяжемся с Вами в течении 5 минут</div>
 		<div class="formBlock">
-			<form class="quest" method="post">
+			<form class="quest send_form" method="post">
+				<!-- Hidden Required Fields -->
+				<input type="hidden" name="project_name" value="ragnelia.ru">
+				<?php dynamic_sidebar( 'admin_mail' ); ?>
+				<input type="hidden" name="form_subject" value="Заявка c подвала">
+				<!--<input type="hidden" name="admin_mail" value="yu.sh.2583@gmail.com">!-->
+				<!-- END Hidden Required Fields -->
 				<textarea class="text" placeholder="Задайте вопрос"></textarea>
 				<input type="text" placeholder="Ваше имя" name="name">
 				<input type="text" placeholder="Мобильный телефон" name="phone">
@@ -65,12 +71,13 @@
 			<p>
 				Наш менеджер свяжеться с Вами в течении 5 минут.
 			</p>
-		</div>		
-		<form id="js_form" method="post" class="cloud-form reviews-form">
+		</div>
+		<form id="js_form" method="post" class="cloud-form reviews-form send_form">
 			<!-- Hidden Required Fields -->
-			<input type="hidden" name="project_name" value="Dinelli.ru">
+			<input type="hidden" name="project_name" value="ragnelia.ru">
 			<?php dynamic_sidebar( 'admin_mail' ); ?>
-			<input type="hidden" name="form_subject" value="Отзыв с сайта">
+			<input type="hidden" name="form_subject" value="Заявка">
+			<!--<input type="hidden" name="admin_mail" value="yu.sh.2583@gmail.com">!-->
 			<!-- END Hidden Required Fields -->
 
 			<input id="phone" class="cloud-form__phone" type="text" name="phone"
@@ -91,7 +98,7 @@
 		</form>
 	</div>
 </div>
-<div id="window" class="popup-question-s ">
+<div id="window" class="popup-question-s">
 	<div class="popup-question-close">
 		close
 	</div>

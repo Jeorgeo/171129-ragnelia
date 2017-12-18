@@ -108,7 +108,7 @@ $news_r = get_posts(
 	</div>
 </div>
 <div id="calc">
-	<form class="calc-form" method="post">
+	<form class="calc-form send_form" method="post">
 		<div class="content">
 			<div class="title">Расчитайте стоимость рекламы за 2 минуты!</div>
 			<div class="h2">заполните поля и узнайте стоимость</div>
@@ -148,8 +148,13 @@ $news_r = get_posts(
 				</div>
 			</div>
 		</div>
+		<!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="ragnelia.ru">
+		<?php dynamic_sidebar( 'admin_mail' ); ?>
+		<input type="hidden" name="form_subject" value="Заявка c подвала">
+		<!--<input type="hidden" name="admin_mail" value="yu.sh.2583@gmail.com">!-->
+		<!-- END Hidden Required Fields -->
 		<input id="pole-type_r" type="hidden" name="type_r" value="">
-		<input id="pole-type_1" type="hidden" name="type_1" value="">
 		<input id="pole-type_2" type="hidden" name="type_2" value="">
 		<input id="pole-price" type="hidden" name="price" value="">
 	</form>

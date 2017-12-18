@@ -26,12 +26,6 @@ var openBtn = document.querySelectorAll(".cloud-link");
 var closeBtn = document.querySelectorAll(".popup-question-close");
 var winPopup = document.querySelector(".wrap");
 
-for (var i = 0; i < closeBtn.length; i++) {
-  console.log(closeBtn[i]);
-}
-
-
-
 function showPopup() {
   winPopup.classList.add("modal-content-show");
   popup.classList.add("modal-content-show");
@@ -84,8 +78,6 @@ for (var i = 0; i < closeBtn.length; i++) {
 
     removePopup();
 
-    console.log('test');
-
   });
 }
 
@@ -116,7 +108,7 @@ winPopup.addEventListener("click", function(event) {
 $(document).ready(function() {
 
 	//E-mail Ajax Send
-	$(".partner-form").submit(function() { //Change
+	$(".send_form").submit(function() { //Change
 		var th = $(this);
 		$.ajax({
 			type: "POST",

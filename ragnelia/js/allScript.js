@@ -57,18 +57,6 @@ $(document).ready(function(){
   ]
 });
 
-	// появление стрелочки
-	/*$('#mainBanner').imagesLoaded({ background: true }, function(){
-		$('.arrowBlock .arrow').addClass('active');
-	});
-
-	$(window).on('scroll', function() {
-        if($('.arrowBlock .arrow').hasClass('active'))
-        {
-        	$('.arrowBlock .arrow').addClass('none');
-        }
-    });*/
-
 	$('.calcBlock .input:not(.noArrow)').click(function(e){
 		countUnit = $(this).find('.unit').length;
 		if($(e.target).hasClass('select'))
@@ -120,7 +108,6 @@ $(document).ready(function(){
 			$(this).removeClass('okey');
 		}
 	});
-
 
 	//Анимация слайдера на главной
 	$('#project .content .sliderBox .contentBox .unit').each(function(){
